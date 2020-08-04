@@ -8,6 +8,8 @@
 // aqui exportaras las funciones que necesites
 export const myFunction = () => {
 };
+
+
 // SingUp
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (event) => {
@@ -20,8 +22,54 @@ signupForm.addEventListener('submit', (event) => {
     .createUserWithEmailAndPassword(signupEmail, signupPassword)
     .then((userCredential) => {
     });
+    auth.createUserWithEmailAndPassword(signupEmail, signupPassword).catch((error) => {
+      const errorCode = error.code;
+    const errorMessage = error.message;
+    if (errorCode == 'auth/email-already-in-use') {
+      alert('El e-mail ya se encuentra registrado');
+    } else if (errorCode == 'auth/invalid-emai') {
+      alert('El formato del e-mail no es válido');
+    } else if (errorCode == 'auth/weak-password') {
+      alert('La contraseña debe tener minimo 6 caracteres');
+    } else {
+      alert(errorMessage);
+    }
+  });
+    signupForm.reset();
 });
-// Signin
+
+firebase.auth().onAuthStateChanged((firebaseUser) => {
+  if (firebaseUser) {
+    firebaseUser.sendEmailVerification().then(() => {
+      // Email sent.
+      alert('Se envio un mensaje a tu correo electrónico');
+    },(error) => {
+      // An error happened.
+      alert('ocurrio un problema');
+    })
+  } else {
+  }
+});
+
+//Verification E-mail
+
+ /*const verificarEmail = () => {
+  const user = auth().currentUser; 
+  console.log(user);
+  
+    user.sendEmailVerification().then(() => {
+      // Correo electrónico enviado. 
+      alert('Se envio un mensaje a tu correo electronico')
+    })
+    .catch((error) => {
+      alert('ocurrio un problema')
+    // Ha ocurrido un error. 
+    verificarEmail();
+  };*/ 
+
+
+
+//Signin
 const signInForm = document.querySelector('#login-form');
 signInForm.addEventListener('submit', (event) => {
   event.preventDefault(); // Para cancelar el evento del reinicio del formulario
@@ -30,20 +78,20 @@ signInForm.addEventListener('submit', (event) => {
   auth
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Limpiar el form
-      signupForm.reset();
       console.log('shao');
     });
-  firebase.auth().signInWithEmailAndPassword(email, password).catch((error) => {
+  auth.signInWithEmailAndPassword(email, password).catch((error) => {
   // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
     if (errorCode == 'auth/wrong-password') {
       alert('La contraseña es incorrecta');
     } else if (errorCode == 'auth/user-not-found') {
-      alert('El usuario es incorrecto');
+      alert('El usuario es incorrecto o no esta registrado');
     } else {
       alert(errorMessage);
     }
   });
+   // Limpiar el form
+  signInForm.reset();
 });

@@ -28,22 +28,22 @@ signupForm.addEventListener('submit', (event) => {
         alert('Se envio un mensaje a tu correo electronico');
       })
         .catch((_error) => {
-          alert('ocurrio un problema')
-        })
+          alert('ocurrio un problema');
+        });
       signupForm.reset();
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-    if (errorCode == 'auth/email-already-in-use') {
-    alert('El e-mail ya se encuentra registrado');
-  } else if (errorCode == 'auth/invalid-emai') {
-    alert('El formato del e-mail no es válido');
-  } else if (errorCode == 'auth/weak-password') {
-    alert('La contraseña debe tener minimo 6 caracteres');
-  } else {
-    alert(errorMessage);
-  } 
+      if (errorCode == 'auth/email-already-in-use') {
+        alert('El e-mail ya se encuentra registrado');
+      } else if (errorCode == 'auth/invalid-emai') {
+        alert('El formato del e-mail no es válido');
+      } else if (errorCode == 'auth/weak-password') {
+        alert('La contraseña debe tener minimo 6 caracteres');
+      } else {
+        alert(errorMessage);
+      }
     });
 });
 
@@ -72,17 +72,17 @@ signInForm.addEventListener('submit', (event) => {
       console.log('shao');
     })
     .catch((error) => {
-  // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    if (errorCode == 'auth/wrong-password') {
-      alert('La contraseña es incorrecta');
-    } else if (errorCode == 'auth/user-not-found') {
-      alert('El usuario es incorrecto o no esta registrado');
-    } else {
-      alert(errorMessage);
-    }
-  });
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode == 'auth/wrong-password') {
+        alert('La contraseña es incorrecta');
+      } else if (errorCode == 'auth/user-not-found') {
+        alert('El usuario es incorrecto o no esta registrado');
+      } else {
+        alert(errorMessage);
+      }
+    });
   // Limpiar el form
   signInForm.reset();
 });

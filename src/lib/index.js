@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable no-alert */
 /* eslint-disable eqeqeq */
 /* eslint-disable no-console */
@@ -84,15 +85,19 @@ signInForm.addEventListener('submit', (event) => {
     .catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
-      const errorMessage = error.message;
       if (errorCode == 'auth/wrong-password') {
         alert('La contraseña es incorrecta');
-      } else if (errorCode == 'auth/user-not-found') {
-        alert('El usuario es incorrecto o no esta registrado');
-      } else {
-        alert(errorMessage);
+      } else if (errorCode == 'auth/user-not-found'); {
+        alert('El usuario es incorrecto o no está registrado');
       }
     });
   // Limpiar el form
   signInForm.reset();
+});
+// const provider = new firebase.auth.GoogleAuthProvider();
+const loginGoogle = document.querySelector('#login-google');
+loginGoogle.addEventListener('click', () => {
+// Inicio de sesión con g-mail y contraseña de g-mail
+  const googleProvider = new firebase.auth.GoogleAuthProvider();
+  return firebase.auth().signInWithPopup(googleProvider);
 });

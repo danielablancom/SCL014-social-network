@@ -1,14 +1,12 @@
-// aqui exportaras las funciones que necesites
-
 /* eslint-disable no-alert */
 /* eslint-disable eqeqeq */
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+
 // aqui exportaras las funciones que necesites
 export const myFunction = () => {
 };
-
 
 // SingUp
 const signupForm = document.querySelector('#signup-form');
@@ -20,10 +18,13 @@ signupForm.addEventListener('submit', (event) => {
   const signupPassword2 = document.querySelector('#signup-password2').value;
   auth
     .createUserWithEmailAndPassword(signupEmail, signupPassword)
-    .then((userCredential) => {
+    .then(() => {
+      const configuration = {
+        url: 'http://localhost:5000/',
+      };
       // E-mail de verificación
       const user = auth.currentUser;
-      user.sendEmailVerification().then(() => {
+      user.sendEmailVerification(configuration).then(() => {
         // Correo electrónico enviado.
         alert('Se envio un mensaje a tu correo electronico');
       })
@@ -45,6 +46,15 @@ signupForm.addEventListener('submit', (event) => {
         alert(errorMessage);
       }
     });
+});
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    user.sendEmailVerification().then(() => {
+      // Email sent.
+      window.location = 'index.html';
+    });
+  }
 });
 
 /* firebase.auth().onAuthStateChanged((firebaseUser) => {

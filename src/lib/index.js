@@ -22,19 +22,19 @@ signupForm.addEventListener('submit', (event) => {
     .createUserWithEmailAndPassword(signupEmail, signupPassword)
     .then((userCredential) => {
       // E-mail de verificación
-      const user = auth .currentUser; 
+      const user = auth.currentUser;
       user.sendEmailVerification().then(() => {
-        // Correo electrónico enviado. 
-        alert('Se envio un mensaje a tu correo electronico')
+        // Correo electrónico enviado.
+        alert('Se envio un mensaje a tu correo electronico');
       })
-      .catch((error) => {
-        alert('ocurrio un problema')
-      // Ha ocurrido un error.
-    });
-    auth.createUserWithEmailAndPassword(signupEmail, signupPassword).catch((error) => {
-      const errorCode = error.code;
-    const errorMessage = error.message;
-    /* if (errorCode == 'auth/email-already-in-use') {
+        .catch((error) => {
+          alert('ocurrio un problema');
+          // Ha ocurrido un error.
+        });
+      auth.createUserWithEmailAndPassword(signupEmail, signupPassword).catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        /* if (errorCode == 'auth/email-already-in-use') {
       alert('El e-mail ya se encuentra registrado');
     } else if (errorCode == 'auth/invalid-emai') {
       alert('El formato del e-mail no es válido');
@@ -43,11 +43,11 @@ signupForm.addEventListener('submit', (event) => {
     } else {
       alert(errorMessage);
     } */
-  }); 
-    signupForm.reset();
+      });
+      signupForm.reset();
+    });
 });
-});
-//Create User with Email and Password
+// Create User with Email and Password
 /* auth.createUserWithEmailAndPassword(signupEmail, signupPassword)
 .then((user) => {
 verificarEmail();
@@ -72,10 +72,10 @@ console.log(Holaaa)
       alert('ocurrio un problema');
     })
   } else {
-  
+
 }); */
 
-//Signin
+// Signin
 const signInForm = document.querySelector('#login-form');
 signInForm.addEventListener('submit', (event) => {
   event.preventDefault(); // Para cancelar el evento del reinicio del formulario
@@ -98,6 +98,6 @@ signInForm.addEventListener('submit', (event) => {
       alert(errorMessage);
     }
   });
-   // Limpiar el form
+  // Limpiar el form
   signInForm.reset();
 });

@@ -27,40 +27,25 @@ signupForm.addEventListener('submit', (event) => {
         // Correo electrónico enviado.
         alert('Se envio un mensaje a tu correo electronico');
       })
-        .catch((error) => {
-          alert('ocurrio un problema');
-          // Ha ocurrido un error.
-        });
-      auth.createUserWithEmailAndPassword(signupEmail, signupPassword).catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        /* if (errorCode == 'auth/email-already-in-use') {
-      alert('El e-mail ya se encuentra registrado');
-    } else if (errorCode == 'auth/invalid-emai') {
-      alert('El formato del e-mail no es válido');
-    } else if (errorCode == 'auth/weak-password') {
-      alert('La contraseña debe tener minimo 6 caracteres');
-    } else {
-      alert(errorMessage);
-    } */
-      });
+        .catch((_error) => {
+          alert('ocurrio un problema')
+        })
       signupForm.reset();
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    if (errorCode == 'auth/email-already-in-use') {
+    alert('El e-mail ya se encuentra registrado');
+  } else if (errorCode == 'auth/invalid-emai') {
+    alert('El formato del e-mail no es válido');
+  } else if (errorCode == 'auth/weak-password') {
+    alert('La contraseña debe tener minimo 6 caracteres');
+  } else {
+    alert(errorMessage);
+  } 
     });
 });
-// Create User with Email and Password
-/* auth.createUserWithEmailAndPassword(signupEmail, signupPassword)
-.then((user) => {
-verificarEmail();
-console.log(Holaaa)
-})
-.catch((error) => {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode);
-  console.log(errorMessage);
-}); */
-
 
 /* firebase.auth().onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {
@@ -85,8 +70,8 @@ signInForm.addEventListener('submit', (event) => {
     .signInWithEmailAndPassword(email, password)
     .then(() => {
       console.log('shao');
-    });
-  auth.signInWithEmailAndPassword(email, password).catch((error) => {
+    })
+    .catch((error) => {
   // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;

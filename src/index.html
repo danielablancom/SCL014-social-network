@@ -4,9 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!--Link para usar iconos-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+  <title>EASYCOOK</title>
 </head>
 <body>
-  <script type="module" src="main.js"></script>
+ <!-- Pendiente con el header y si debe estar dentro de un div general-->
+  <header>
+  </header>
+  <!-- html primera página input login usuario -->
+  <form id="login-form" class="formulario">
+    <div>
+      <img class="logo" src="./img/iconos/LOGO.jpg">
+    </div>
+    <h1>EASYCOOK</h1>
+     <div class="contenedor">
+       <p>Inicia sesión:</p>
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="email" id="login-email" placeholder="E-mail" required>
+      </div>
+      <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" id="login-password" placeholder="Contraseña" required>
+      </div>
+         <input type="submit" value="Entrar" class="button">
+      <div class="input-contenedor-google">
+        <i class="fab fa-google icon"></i>
+        <button class="btn-google">Inicia sesión con Google</button>
+      </div>
+      <div>
+        <p>¿No tienes cuenta?</p>
+        <button class="check-in">Registrate aqui</button>
+      </div>
+    </div>
+    </form>
+    <!-- html página registro usuario -->
+    <form id="signup-form" class="formulario">
+      <div>
+        <img class="logo" src="./img/iconos/LOGO.jpg">
+      </div>
+      <h1>EASYCOOK</h1>
+       <div class="contenedor">
+         <p>Regístrate con tu E-mail:</p>
+         <div class="input-contenedor">
+          <i class="fas fa-user icon"></i>
+          <input type="text" id="singup-username" placeholder="Nombre de usuario" value="" required>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" id="signup-email" autocomplete="on" placeholder="E-mail" value="" required>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-key icon"></i>
+          <input type="password" id="signup-password" placeholder="Contraseña" oninvalid="setCustomValidity('Tu contraseña debe tener min. 6 caracteres')"value="" required>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-key icon"></i>
+          <input type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
+        </div class="input-contenedor">
+           <input type="submit" value="Registrarse" class="button">
+        </div>
+      </div>
+      </form>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyChX-DppiakvuefaxODjurMrK29EQ4PfdQ",
+    authDomain: "red-social---easycook.firebaseapp.com",
+    databaseURL: "https://red-social---easycook.firebaseio.com",
+    projectId: "red-social---easycook",
+    storageBucket: "red-social---easycook.appspot.com",
+    messagingSenderId: "1063020391578",
+    appId: "1:1063020391578:web:4970c3e0893c40298dc323",
+    measurementId: "G-F4ES2DG92M"
+  };
+// Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  firebase.analytics();
+</script>
+<!--Aqui finaliza-->
+<script type="module" src="main.js"></script>
 </body>
 </html>

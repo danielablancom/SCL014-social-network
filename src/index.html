@@ -10,13 +10,10 @@
   <title>EASYCOOK</title>
 </head>
 <body>
- <!-- Pendiente con el header y si debe estar dentro de un div general-->
-  <header>
-  </header>
-  <!-- html primera página input login usuario -->
+  <div id="root"></div>
   <form id="login-form" class="formulario">
     <div>
-      <img class="logo" src="./img/iconos/LOGO.jpg">
+  '    <img class="logo" src="./img/iconos/LOGO.jpg">
     </div>
     <h1>EASYCOOK</h1>
      <div class="contenedor">
@@ -30,44 +27,18 @@
         <input type="password" id="login-password" placeholder="Contraseña">
     </form>
     </div>
-         <input type="submit" value="Entrar" class="button">
+         <input href='#/feed' type="buttom" value="Entrar" class="button">
       <div class="input-contenedor-google">
         <i class="fab fa-google icon"></i>
         <button id="login-google" class="btn-google">Inicia sesión con Google</button>
       </div>
       <div>
         <p>¿No tienes cuenta?</p>
-        <button class="check-in">Regístrate aqui</button>
+        <a type="button" href="#/login" class="check-in">Regístrate aquí></a>
       </div>
-    </div>
-    <!-- html página registro usuario -->
-    <form id="signup-form" class="formulario">
-      <div>
-        <img class="logo" src="./img/iconos/LOGO.jpg">
-      </div>
-      <h1>EASYCOOK</h1>
-       <div class="contenedor">
-         <p>Regístrate con tu E-mail:</p>
-         <div class="input-contenedor">
-          <i class="fas fa-user icon"></i>
-          <input type="text" id="singup-username" placeholder="Nombre de usuario" value="" required>
-        </div>
-        <div class="input-contenedor">
-          <i class="fas fa-envelope icon"></i>
-          <input type="email" id="signup-email" autocomplete="on" placeholder="E-mail" value="" required>
-        </div>
-        <div class="input-contenedor">
-          <i class="fas fa-key icon"></i>
-          <input type="password" id="signup-password" placeholder="Contraseña" oninvalid="setCustomValidity('Tu contraseña debe tener min. 6 caracteres')"value="" required>
-        </div>
-        <div class="input-contenedor">
-          <i class="fas fa-key icon"></i>
-          <input type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
-        </div class="input-contenedor">
-           <input type="submit" value="Registrarse" class="button">
-        </div>
-      </div>
-      </form>
+
+    <a href="#/login" class="check-in">Regístrate aqui</a>
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use

@@ -49,14 +49,14 @@ signupForm.addEventListener('submit', (event) => {
     });
 });
 
-firebase.auth().onAuthStateChanged((user) => {
+/* firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     user.sendEmailVerification().then(() => {
       // Email sent.
       window.location = 'index.html';
     });
   }
-});
+}); */
 
 /* firebase.auth().onAuthStateChanged((firebaseUser) => {
   if (firebaseUser) {

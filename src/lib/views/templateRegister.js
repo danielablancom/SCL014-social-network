@@ -1,4 +1,5 @@
-export const register = () => {
+/* eslint-disable max-len */
+/* export const register = () => {
   const viewRegister = `
   <form id="signup-form" class="formulario">
     <div>
@@ -28,4 +29,4 @@ export const register = () => {
     </div>
     </form>
     `;
-};
+}; */

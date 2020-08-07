@@ -20,23 +20,24 @@ body {
     margin-top: 40px;
     padding: 20px;
 }
+
+.formulario-2{
+    padding: 20px;
+    padding-top: 0px;
+
+}
 h1{
     text-align: center;
     color: #1A2537;
     font-size: 1.5em;
 }
 input[type="text"],
-input[type="password"]
-{
+input[type="password"],
+input[type="email"]{
     font-size: 0.9em;
     padding: 10px;
     border: none;
-}
-input[type="email"]
-{
-    font-size: 0.9em;
-    padding: 10px;
-    border: none;
+    width: 80%;
 }
 .input-contenedor{
     margin-bottom: 15px;
@@ -67,7 +68,6 @@ input[type="email"]
     cursor: pointer;
 }
 .input-contenedor-google{
-    margin-top: 40px;
     margin-bottom: 15px;
     border: 1px solid #FF9635;
 }
@@ -87,9 +87,11 @@ p {
 }
 @media(min-width:768px)
 {
-    .formulario{
+    .formulario, .formulario-2 {
+        margin-top: 0;
         margin: auto;
         width: 500px;
-        margin-top: 150px;
     }
+
+
 }

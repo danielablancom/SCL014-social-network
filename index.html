@@ -13,7 +13,8 @@
 
 <body>
   <div id="root"></div>
-
+  
+<!--html página de Logueo usuario
   <div class="contenedor">
     <form id="login-form" class="formulario">
       <div>
@@ -31,7 +32,8 @@
           <input type="password" id="login-password" placeholder="Contraseña">
         </div>
         <div class="input-contenedor">
-          <input type="submit" value="Entrar" class="button">
+          //href no funciona dentro del form 
+          <a href="#/feed"><input type="submit" value="Entrar" class="button"></a>
         </div>
       </div>
     </form>
@@ -42,12 +44,16 @@
       </div>
       <div>
         <p>¿No tienes cuenta?</p>
-        <button class="check-in">Regístrate aqui</button>
+        <a href="#/register"><button class="check-in">Regístrate aqui</button></a>
       </div>
     </div>
-  </div>
-  <!-- html página registro usuario -->
+  </div> -->
+  
+  <!-- html página registro usuario 
   <form id="signup-form" class="formulario">
+    <a href="#/login">
+      <i id="arrow" class="fas fa-chevron-left"></i>
+    </a>
     <div>
       <img class="logo" src="./img/iconos/LOGO.jpg">
     </div>
@@ -72,11 +78,11 @@
         <input type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
       </div>
       <div class="input-contenedor">
-        <input type="submit" value="Registrarse" class="button">
+         a href no funciona porque está dentro del form 
+        <a href="#/login"><input type="submit" value="Registrarse" class="button"></a>
       </div>
     </div>
-  </form>
-
+  </form> -->
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -104,6 +110,7 @@
   </script>
   <!--Aqui finaliza-->
   <script type="module" src="main.js"></script>
+  
 </body>
 
 </html>

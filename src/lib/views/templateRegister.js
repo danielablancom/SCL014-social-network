@@ -31,7 +31,7 @@ export const register = () => {
       </div>
       <div class="input-contenedor">
         <!-- a href no funciona porque está dentro del form -->
-        <a href="#/login"><input type="submit" value="Registrarse" class="button"></a>
+        <input id="btn-register" type="submit" value="Registrarse" class="button">
       </div>
     </div>
   </form>

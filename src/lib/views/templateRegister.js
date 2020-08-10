@@ -14,20 +14,20 @@ export const register = () => {
       <p>Regístrate con tu E-mail:</p>
       <div class="input-contenedor">
         <i class="fas fa-user icon"></i>
-        <input type="text" id="singup-username" placeholder="Nombre de usuario" value="" required>
+        <input class="input-init" type="text" id="singup-username" placeholder="Nombre de usuario" value="" required>
       </div>
       <div class="input-contenedor">
         <i class="fas fa-envelope icon"></i>
-        <input type="email" id="signup-email" autocomplete="on" placeholder="E-mail" value="" required>
+        <input class="input-init" type="email" id="signup-email" autocomplete="on" placeholder="E-mail" value="" required>
       </div>
       <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-        <input type="password" id="signup-password" placeholder="Contraseña"
+        <input class="input-init" type="password" id="signup-password" placeholder="Contraseña"
           oninvalid="setCustomValidity('Tu contraseña debe tener min. 6 caracteres')" value="" required>
       </div>
       <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-        <input type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
+        <input class="input-init" type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
       </div>
       <div class="input-contenedor">
         <!-- a href no funciona porque está dentro del form -->

@@ -14,75 +14,140 @@
 <body>
   <div id="root"></div>
 
-  <!--html página de Logueo usuario
-  <div class="contenedor">
-    <form id="login-form" class="formulario">
-      <div>
-        <img class="logo" src="./img/iconos/LOGO.jpg">
-      </div>
-      <h1>EASYCOOK</h1>
-      <div class="">
-        <p>Inicia sesión:</p>
-        <div class="input-contenedor">
-          <i class="fas fa-envelope icon"></i>
-          <input type="email" id="login-email" placeholder="E-mail">
-        </div>
-        <div class="input-contenedor">
-          <i class="fas fa-key icon"></i>
-          <input type="password" id="login-password" placeholder="Contraseña">
-        </div>
-        <div class="input-contenedor">
-          //href no funciona dentro del form 
-          <a href="#/feed"><input type="submit" value="Entrar" class="button"></a>
-        </div>
-      </div>
-    </form>
-    <div class="formulario-2">
-      <div class="input-contenedor-google">
-        <i class="fab fa-google icon"></i>
-        <button id="login-google" class="btn-google">Inicia sesión con Google</button>
-      </div>
-      <div>
-        <p>¿No tienes cuenta?</p>
-        <a href="#/register"><button class="check-in">Regístrate aqui</button></a>
-      </div>
+  <header>
+    <div class="container-logo">
+      <i class="fas fa-chevron-left flecha"></i>
+      <img class="logo-header" src="./img/iconos/LOGO.jpg">
     </div>
-  </div> -->
+    <div class="container-icon">
+      <i class="fas fa-plus icon-feed"></i>
+      <i class="fas fa-search icon-feed"></i>
+      <i class="fas fa-user icon-feed"></i>
+      <i class="fas fa-filter icon-feed"></i>
+    </div>
+  </header>
 
-  <!-- html página registro usuario 
-  <form id="signup-form" class="formulario">
-    <a href="#/login">
-      <i id="arrow" class="fas fa-chevron-left"></i>
-    </a>
+  <div class="imagesFeed">
+    <img class="images" src="./img/Img-recetas/rapido-y-facil.jpg" alt="">
+    <img class="images" src="./img/Img-recetas/comida-saludable.jpg" alt="">
+    <img class="images" src="./img/Img-recetas/comida-vegana.jpg" alt="">
+  </div>
+  <div class="btn-feed">
+    <button class="btn">Rápido y facil</button>
+    <button class="btn">Saludable</button>
+    <button class="btn">Vegano</button>
+  </div>
+
+  <div class="Post">
+    <h2>| Publicaciones recientes</h2>
+  </div>
+
+
+  <div class="container2">
     <div>
-      <img class="logo" src="./img/iconos/LOGO.jpg">
+      <img class="img-post" src="./img/Img-recetas/1.jpg" alt="">
     </div>
-    <h1>EASYCOOK</h1>
-    <div class="contenedor">
-      <p>Regístrate con tu E-mail:</p>
-      <div class="input-contenedor">
-        <i class="fas fa-user icon"></i>
-        <input type="text" id="singup-username" placeholder="Nombre de usuario" value="" required>
+    <div>
+      <h5>Brocoli gratinado</h5>
+      <div>
+        <i class="far fa-heart icon-feed2"></i>
       </div>
-      <div class="input-contenedor">
-        <i class="fas fa-envelope icon"></i>
-        <input type="email" id="signup-email" autocomplete="on" placeholder="E-mail" value="" required>
-      </div>
-      <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
-        <input type="password" id="signup-password" placeholder="Contraseña"
-          oninvalid="setCustomValidity('Tu contraseña debe tener min. 6 caracteres')" value="" required>
-      </div>
-      <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
-        <input type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
-      </div>
-      <div class="input-contenedor">
-         a href no funciona porque está dentro del form 
-        <a href="#/login"><input type="submit" value="Registrarse" class="button"></a>
+      <div>
+        <i class="fas fa-user icon-feed2"></i>
       </div>
     </div>
-  </form> -->
+  </div>
+
+  <div class="container2">
+    <div>
+      <img class="img-post" src="./img/Img-recetas/arroz-frito-con-huevo.jpg" alt="">
+    </div>
+    <div class="container-hijo">
+      <h5>Arroz con huevo</h5>
+      <div>
+        <i class="far fa-heart icon-feed2"></i>
+      </div>
+      <div>
+        <i class="fas fa-user icon-feed2"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="container2">
+    <div>
+      <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
+    </div>
+    <div>
+      <h5>Arroz con salsa</h5>
+      <div>
+        <i class="far fa-heart icon-feed2"></i>
+      </div>
+      <div>
+        <i class="fas fa-user icon-feed2"></i>
+      </div>
+    </div>
+  </div>
+
+  <!--Cuarta pantalla carrusel-->
+  <header>
+
+    <div class="container-logo">
+      <i class="fas fa-chevron-left flecha"></i>
+      <img class="logo-header" src="./img/iconos/LOGO.jpg">
+    </div>
+    <div class="container-icon">
+      <i class="fas fa-plus icon-feed"></i>
+      <i class="fas fa-search icon-feed"></i>
+      <i class="fas fa-user icon-feed"></i>
+      <i class="fas fa-filter icon-feed"></i>
+    </div>
+  </header>
+  </div>
+
+
+  <!--html página publicar post-->
+
+
+  <div class="Container-camera">
+    <i class="fa fa-camera camera" aria-hidden="true"></i>
+    <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
+  </div>
+  <di v class="container-recipe">
+    <div class="ctn-rct">
+      <input class="ctn-receta2" type="text" placeholder="Ej: Brócoli gratinado"><br>
+      <label>Comensales<input class="ctn-receta3" type="text" placeholder="Ej: 2 personas"></label><br>
+      <label>Tiempo de preparación<input class="ctn-receta" type="text" placeholder="Ej: 15 minutos"></label>
+    </div>
+    <div class="ctn-rct">
+      <h5>INGREDIENTES:</h5>
+      <input class="ctn-receta2" type="text" placeholder="Ej: 1 rama de brócoli de unos 600gr.">
+      <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
+      <input class="ctn-receta2" type="text" placeholder="Ej: 3 cucharadas de aceite de oliva">
+      <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
+      <div class="add">
+        <i class="fas fa-plus icon-feed"></i>
+        <label>Ingredientes.</label>
+      </div>
+    </div>
+    <div class="ctn-rct">
+      <h5>PASO A PASO:</h5>
+      <input class="ctn-receta2" type="text" placeholder="Ej:Cocemos el brocoli al vapor 3 ó 4 min.
+          Lo separamos en arbolitos.">
+      <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
+      <div class="add">
+        <i class="fas fa-plus icon-feed"></i>
+        <label>Paso a paso.</label>
+      </div>
+    </div>
+    <div class="btn-feed">
+      <button class="btn"><strong>Publicar</strong></button>
+    </div>
+  </div>
+
+
+
+
+
 
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -90,7 +155,6 @@
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-  <!--Aqui finaliza-->
   <script>
     // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -110,7 +174,6 @@
     firebase.analytics();
 
   </script>
-
   <script type="module" src="main.js"></script>
 
 </body>

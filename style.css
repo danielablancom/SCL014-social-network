@@ -8,6 +8,16 @@ body {
 * {
     box-sizing: border-box;
 }
+header{
+    padding: 20px;
+    padding-bottom: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    display: flex;
+}
+.logo-header {
+    width: 20%;
+    margin-left: 3%;
+}
 .contenedor{
     width: 100%;
     padding: 20px;
@@ -20,24 +30,22 @@ body {
     margin-top: 40px;
     padding: 20px;
 }
-
 .formulario-2{
     padding: 20px;
     padding-top: 0px;
-
 }
 h1{
     text-align: center;
     color: #1A2537;
     font-size: 1.5em;
 }
-input[type="text"],
-input[type="password"],
-input[type="email"]{
+.input-init{
     font-size: 0.9em;
     padding: 10px;
     border: none;
     width: 80%;
+    text-align: left;
+    margin-bottom: 2%;
 }
 .input-contenedor{
     margin-bottom: 15px;
@@ -48,10 +56,29 @@ input[type="email"]{
     text-align: center;
     color: #999;
 }
+.icon-feed{
+    min-width: 50px;
+    text-align: right;
+    color: rgb(0, 0, 0);
+}
+.logo-header{
+    width: 50%;
+}
+.container-logo{
+    display: flex;
+}
+.container-icon{
+    display: flex;
+    align-items: center;
+}
+.flecha{
+    color: rgb(0, 0, 0);
+    align-items: center;
+    padding-top: 10%;
+}
 .button{
     border: none;
     width: 100%;
-    height: 5%;
     color: black;
     font-size: 1em;
     background: #FF9635;
@@ -82,25 +109,174 @@ input[type="email"]{
     cursor: pointer;
 }
 p {
-    text-align: left;
     font-size: 0.8em;
 }
-
+h2 {
+    font-size: 0.7em;  
+    margin-left: 18px; 
+    margin-top: 20px;  
+}
 #arrow{
-        margin: 0 0 0 0.25rem;
-        font-weight: 700;
-        font-size: 1.5rem;
-        text-decoration: none;
-        align-self: flex-start;
-        color: black; 
+    margin: 0 0 0 0.25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    align-self: flex-start;
+    color: black;
+}
+.imagesFeed {
+    display: flex; 
+    flex-direction: row;
+    width: 100%; 
+    justify-content: space-around;
+    padding: 10px 0;
+}
+.images {
+    flex-basis: auto; 
+    width: 110px;
+    height: 88px;
+}
+.btn {
+    border: none;
+    width: 110px;
+    height: 40px;
+    color: black;
+    font-size: 0.9em;
+    background: #FF9635;
+    cursor: pointer; 
+}
+.btn-feed{
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    justify-content: space-around;
+}
+.button-publish {
+    border: none;
+    width: 110px;
+    height: 40px;
+    color: black;
+    font-size: 0.9em;
+    background: #FF9635;
+    cursor: pointer;  
+}
+.container2{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-bottom: 5%;
+}
+.img-post{
+    width: 94px;
+    height: 87px;
+    padding: 10px;
+}
+h5 {
+    margin: 8px;
+}
+.icon-feed2{
+    min-width: 50px;
+    margin-left: 7%;
+    color: rgb(0, 0, 0);
+}
+.Container-camera{
+    width: 100%;
+    height: 100%;
+    background-color: #E5E5E5;
+    text-align: center;
+    border: none;
+}
+.camera{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    text-align: center;
+}
+.container-recipe{
+    padding: 0 20px;
+    text-align: left;
+    padding-left: 33px;
+}
+.clear{
+    border: none;
+    background: none;
+    color: black;
+}
+.ctn-receta{
+    font-size: 0.9em;
+    border: none;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 2%;
+    background-color: #E5E5E5;
+    margin-left: 10%;
+}
+.ctn-rct{
+    border-bottom: 2px solid #E5E5E5;
+}
+.ctn-receta3{
+    font-size: 0.9em;
+    border: none;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 2%;
+    background-color: #E5E5E5;
+    margin-left: 32%;
+
+}
+.ctn-receta2{
+    font-size: 0.9em;
+    border: none;
+    width: 280px;
+    height: 30px;
+    text-align: left;
+    margin-bottom: 2%;
+    background-color: #E5E5E5;
+}
+.add{
+    margin-left: -34px;
+    margin-bottom: 5%;
+}
+
+label{
+   font-size: 0.9em;
 }
 @media(min-width:768px)
 {
-    .formulario, .formulario-2 {
+    .formulario, .formulario-2, header, .imagesFeed, .btn-feed, .container2, .container-recipe, .Container-camera{
         margin-top: 0;
         margin: auto;
         width: 500px;
     }
+
+    h2{
+        margin-top: 0;
+        margin: auto;
+        width: 500px;
+        font-size: 14px;
+
+    }
+
+    .Post{
+        margin-top: 5%;
+        margin-bottom: 4%
+    }
+
+    .ctn-receta{
+        margin-left: 44%;
+    }
+
+    .ctn-receta3{
+        margin-left: 59%;
+
+    }
+
+
+
 
 
 }

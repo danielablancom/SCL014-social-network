@@ -4,7 +4,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-
 // aqui exportaras las funciones que necesites
 export const myFunction = () => {
 //  console.log('Hola');

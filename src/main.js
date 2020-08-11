@@ -6,6 +6,7 @@ import {
 import { login } from './lib/views/templateLogin.js';
 import { register } from './lib/views/templateRegister.js';
 import { changeRoute } from './lib/router.js';
+// import { user } from './lib/firebase-firestore.js';
 
 const generateLoginListener = () => {
   // id formulario inicio de sesión
@@ -48,15 +49,63 @@ const generateRegisterListener = () => {
   }
 };
 
-const init = () => {
-  document.getElementById('root').innerHTML = login();
-  generateLoginListener();
-  window.addEventListener('hashchange', () => {
-    document.getElementById('root').innerHTML = register();
-    myFunction();
-    changeRoute(window.location.hash);
-    generateRegisterListener();
-  });
+const db = firebase.firestore();
+
+const user = () => {
+  db.collection('users').add({
+    first: 'Ada',
+    last: 'Lovelace',
+    born: 1815,
+  })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
 };
 
-window.addEventListener('load', init);
+const generateRecipeListener = () => {
+  const taskRecipe = document.getElementById('btn-publish');
+
+  const saveTask = (title,
+    diners,
+    timePreparation,
+    steps,
+    ingredients) => db.collection('tasks').set({
+    title,
+    diners,
+    timePreparation,
+    steps,
+    ingredients,
+  });
+  console.log(title, ingredients);
+
+
+  taskRecipe.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const title = document.querySelector('#title-rct').value;
+    const diners = document.querySelector('#comensales').value;
+    const timePreparation = document.querySelector('#time-rct').value;
+    const steps = document.querySelector('#steps').value;
+    const ingredients = document.querySelector('#ingredient').value;
+
+
+    user();
+  });
+
+  const init = () => {
+    document.getElementById('root').innerHTML = login();
+    generateLoginListener();
+    window.addEventListener('hashchange', () => {
+      document.getElementById('root').innerHTML = register();
+      myFunction();
+      changeRoute(window.location.hash);
+      generateRegisterListener();
+      generateRecipeListener();
+    });
+  };
+
+  window.addEventListener('load', init);
+};

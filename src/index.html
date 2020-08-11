@@ -9,11 +9,13 @@
   <!--Link para usar iconos-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <title>EASYCOOK</title>
+
+  <!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
 </head>
 
 <body>
   <div id="root"></div>
-
+  <!--Header-->
   <header>
     <div class="container-logo">
       <i class="fas fa-chevron-left flecha"></i>
@@ -27,66 +29,68 @@
     </div>
   </header>
 
-  <div class="imagesFeed">
-    <img class="images" src="./img/Img-recetas/rapido-y-facil.jpg" alt="">
-    <img class="images" src="./img/Img-recetas/comida-saludable.jpg" alt="">
-    <img class="images" src="./img/Img-recetas/comida-vegana.jpg" alt="">
-  </div>
-  <div class="btn-feed">
-    <button class="btn">Rápido y facil</button>
-    <button class="btn">Saludable</button>
-    <button class="btn">Vegano</button>
-  </div>
+  <!--Feed-->
+  <section>
+    <div class="imagesFeed">
+      <img class="images" src="./img/Img-recetas/rapido-y-facil.jpg" alt="">
+      <img class="images" src="./img/Img-recetas/comida-saludable.jpg" alt="">
+      <img class="images" src="./img/Img-recetas/comida-vegana.jpg" alt="">
+    </div>
+    <div class="btn-feed">
+      <button class="btn">Rápido y facil</button>
+      <button class="btn">Saludable</button>
+      <button class="btn">Vegano</button>
+    </div>
 
-  <div class="Post">
-    <h2>| Publicaciones recientes</h2>
-  </div>
+    <div class="Post">
+      <h2>| Publicaciones recientes</h2>
+    </div>
 
+    <div class="container2">
+      <div>
+        <img class="img-post" src="./img/Img-recetas/1.jpg" alt="">
+      </div>
+      <div>
+        <h5>Brocoli gratinado</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div>
+        <div>
+          <i class="fas fa-user icon-feed2"></i>
+        </div>
+      </div>
+    </div>
 
-  <div class="container2">
-    <div>
-      <img class="img-post" src="./img/Img-recetas/1.jpg" alt="">
-    </div>
-    <div>
-      <h5>Brocoli gratinado</h5>
+    <div class="container2">
       <div>
-        <i class="far fa-heart icon-feed2"></i>
+        <img class="img-post" src="./img/Img-recetas/arroz-frito-con-huevo.jpg" alt="">
       </div>
-      <div>
-        <i class="fas fa-user icon-feed2"></i>
+      <div class="container-hijo">
+        <h5>Arroz con huevo</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div>
+        <div>
+          <i class="fas fa-user icon-feed2"></i>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container2">
-    <div>
-      <img class="img-post" src="./img/Img-recetas/arroz-frito-con-huevo.jpg" alt="">
-    </div>
-    <div class="container-hijo">
-      <h5>Arroz con huevo</h5>
+    <div class="container2">
       <div>
-        <i class="far fa-heart icon-feed2"></i>
+        <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
       </div>
       <div>
-        <i class="fas fa-user icon-feed2"></i>
+        <h5>Arroz con salsa</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div>
+        <div>
+          <i class="fas fa-user icon-feed2"></i>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="container2">
-    <div>
-      <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
-    </div>
-    <div>
-      <h5>Arroz con salsa</h5>
-      <div>
-        <i class="far fa-heart icon-feed2"></i>
-      </div>
-      <div>
-        <i class="fas fa-user icon-feed2"></i>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!--Cuarta pantalla carrusel-->
   <header>
@@ -102,59 +106,59 @@
       <i class="fas fa-filter icon-feed"></i>
     </div>
   </header>
-  </div>
-
 
   <!--html página publicar post-->
-
-
-  <div class="Container-camera">
-    <i class="fa fa-camera camera" aria-hidden="true"></i>
-    <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
-  </div>
-  <di v class="container-recipe">
-    <div class="ctn-rct">
-      <input class="ctn-receta2" type="text" placeholder="Ej: Brócoli gratinado"><br>
-      <label>Comensales<input class="ctn-receta3" type="text" placeholder="Ej: 2 personas"></label><br>
-      <label>Tiempo de preparación<input class="ctn-receta" type="text" placeholder="Ej: 15 minutos"></label>
+  <form>
+    <div class="Container-camera">
+      <i class="fa fa-camera camera" aria-hidden="true"></i>
+      <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
     </div>
-    <div class="ctn-rct">
-      <h5>INGREDIENTES:</h5>
-      <input class="ctn-receta2" type="text" placeholder="Ej: 1 rama de brócoli de unos 600gr.">
-      <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
-      <input class="ctn-receta2" type="text" placeholder="Ej: 3 cucharadas de aceite de oliva">
-      <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
-      <div class="add">
-        <i class="fas fa-plus icon-feed"></i>
-        <label>Ingredientes.</label>
+    <div class="container-recipe">
+      <div class="ctn-rct">
+        <input id="title-rct" class="ctn-receta2" type="text" placeholder="Ej: Brócoli gratinado" value=""><br>
+        <label>Comensales<input id="comensales" class="ctn-receta3" type="text" placeholder="Ej: 2 personas"
+            value=""></label><br>
+        <label>Tiempo de preparación<input id="time-rct" class="ctn-receta" type="text" placeholder="Ej: 15 minutos"
+            value=""></label>
+      </div>
+      <div class="ctn-rct">
+        <h5>INGREDIENTES:</h5>
+        <input id="ingredient" class="ctn-receta2" type="text" placeholder="Ej: 1 rama de brócoli de unos 600gr."
+          value="">
+        <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
+        <input class="ctn-receta2" type="text" placeholder="Ej: 3 cucharadas de aceite de oliva">
+        <input class="clear" id="clear1" type="button" title="Borrar texto" value="X">
+        <div class="add">
+          <i class="fas fa-plus icon-feed"></i>
+          <label>Ingredientes.</label>
+        </div>
+      </div>
+      <div class="ctn-rct">
+        <h5>PASO A PASO:</h5>
+        <input id="steps" class="ctn-receta2" type="text" placeholder="Ej:Cocemos el brocoli al vapor 3 ó 4 min.
+          Lo separamos en arbolitos." value="">
+        <input class="clear" id="clear2" type="button" title="Borrar texto" value="X">
+        <div class="add">
+          <i class="fas fa-plus icon-feed"></i>
+          <label>Paso a paso.</label>
+        </div>
+      </div>
+      <div class="btn-feed">
+        <button class="btn" type="submit" id="btn-publish"><strong>Publicar</strong></button>
       </div>
     </div>
-    <div class="ctn-rct">
-      <h5>PASO A PASO:</h5>
-      <input class="ctn-receta2" type="text" placeholder="Ej:Cocemos el brocoli al vapor 3 ó 4 min.
-          Lo separamos en arbolitos.">
-      <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
-      <div class="add">
-        <i class="fas fa-plus icon-feed"></i>
-        <label>Paso a paso.</label>
-      </div>
-    </div>
-    <div class="btn-feed">
-      <button class="btn"><strong>Publicar</strong></button>
-    </div>
-  </div>
+  </form>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
 
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
 
-
-
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
   <script>
     // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -172,10 +176,11 @@
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     firebase.analytics();
+      // Initializa Firestore
+      //const db = firebase.firestore();
 
   </script>
   <script type="module" src="main.js"></script>
-
 </body>
 
 </html>

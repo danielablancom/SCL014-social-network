@@ -247,12 +247,11 @@ label{
 }
 @media(min-width:768px)
 {
-    .formulario, .formulario-2, header, .imagesFeed, .btn-feed, .container2, .container-recipe, .Container-camera{
+    .formulario, .formulario-2, header, .imagesFeed, .btn-feed, .container2, .Container-camera, .container-recipe {
         margin-top: 0;
         margin: auto;
         width: 500px;
     }
-
     h2{
         margin-top: 0;
         margin: auto;
@@ -260,23 +259,15 @@ label{
         font-size: 14px;
 
     }
-
     .Post{
         margin-top: 5%;
         margin-bottom: 4%
     }
-
     .ctn-receta{
         margin-left: 44%;
     }
-
     .ctn-receta3{
         margin-left: 59%;
 
     }
-
-
-
-
-
 }

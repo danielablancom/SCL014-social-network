@@ -144,21 +144,13 @@ h2 {
     font-size: 0.9em;
     background: #FF9635;
     cursor: pointer; 
+    margin-top: 30px;
 }
 .btn-feed{
     display: flex;
     flex-direction: row;
     width: 100%; 
     justify-content: space-around;
-}
-.button-publish {
-    border: none;
-    width: 110px;
-    height: 40px;
-    color: black;
-    font-size: 0.9em;
-    background: #FF9635;
-    cursor: pointer;  
 }
 .container2{
     display: flex;
@@ -226,7 +218,6 @@ h5 {
     margin-bottom: 2%;
     background-color: #E5E5E5;
     margin-left: 32%;
-
 }
 .ctn-receta2{
     font-size: 0.9em;
@@ -241,7 +232,6 @@ h5 {
     margin-left: -34px;
     margin-bottom: 5%;
 }
-
 label{
    font-size: 0.9em;
 }

@@ -6,10 +6,6 @@ import {
 import { login } from './lib/views/templateLogin.js';
 import { register } from './lib/views/templateRegister.js';
 import { changeRoute } from './lib/router.js';
-// import { feed } from './lib/views/templateFeed.js';
-// import { publicar } from './lib/firebase-firestore.js';
-// import { post } from './lib/views/templatePost.js';
-
 
 const generateLoginListener = () => {
   // id formulario inicio de sesión
@@ -23,7 +19,6 @@ const generateLoginListener = () => {
       const email = document.querySelector('#login-email').value;
       const password = document.querySelector('#login-password').value;
       signInFirebase(email, password);
-      // publicar();
       // Limpiar el form
       signInForm.reset();
     });

@@ -1,8 +1,7 @@
 import { login } from './views/templateLogin.js';
 import { register } from './views/templateRegister.js';
-import { feed } from './templateFeed.js';
+import { feed } from './views/templateFeed.js';
 import { post } from './views/templatePost.js';
-
 
 const showTemplate = (hash) => {
   const containerRoot = document.getElementById('root');

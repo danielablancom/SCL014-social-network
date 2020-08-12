@@ -1,6 +1,21 @@
+import { publicar } from '../firebase-firestore.js';
+
 export const post = () => {
   const divPost = document.createElement('div');
-  const viewPost = `<form>
+  const viewPost = `
+  <header>
+    <div class="container-logo">
+      <i class="fas fa-chevron-left flecha"></i>
+      <img class="logo-header" src="./img/iconos/LOGO.jpg">
+    </div>
+    <div class="container-icon">
+      <a href="#/post"><i class="fas fa-plus icon-feed"></i></a>
+      <i class="fas fa-search icon-feed"></i>
+      <i class="fas fa-user icon-feed"></i>
+      <i class="fas fa-filter icon-feed"></i>
+    </div>
+  </header>
+  <form>
     <div class="Container-camera">
       <i class="fa fa-camera camera" aria-hidden="true"></i>
       <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
@@ -40,6 +55,20 @@ export const post = () => {
       </div>
     </div>
   </form>`;
+
   divPost.innerHTML = viewPost;
   return divPost;
+};
+
+export const postEvent = () => {
+  post();
+  document.getElementById('btn-publish').addEventListener('submit', () => {
+    const title = document.querySelector('#title-rct').value;
+    console.log(title);
+    const diners = document.querySelector('#comensales').value;
+    const timePreparation = document.querySelector('#time-rct').value;
+    const steps = document.querySelector('#steps').value;
+    const ingredients = document.querySelector('#ingredient').value;
+    publicar(title, diners, timePreparation, steps, ingredients);
+  });
 };

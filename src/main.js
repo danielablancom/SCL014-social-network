@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 // Este es el punto de entrada de tu aplicacion
 import {
   myFunction, registerFirebase, signInFirebase, googleProvider,
@@ -48,6 +49,44 @@ const generateRegisterListener = () => {
     });
   }
 };
+
+// CARROUSEL DE IMAGENES
+
+const imagenes = ['./img/Img-recetas/1.jpg', './img/Img-recetas/2.jpg', './img/Img-recetas/3.jpg', './img/Img-recetas/4.jpg', './img/Img-recetas/5.jpg'];
+let cont = 0;
+
+function carrousel(contenedor) {
+  contenedor.addEventListener('click', (e) => {
+    const atras = contenedor.querySelector('.atras');
+    const adelante = contenedor.querySelector('.adelante');
+    const img = contenedor.querySelector('.img');
+    const tgt = e.target;
+
+    if (tgt === atras) {
+      if (cont > 0) {
+        img.src = imagenes[cont - 1];
+        cont--;
+      } else {
+        img.src = imagenes[imagenes.length - 1];
+        cont = imagenes.length - 1;
+      }
+    } else if (tgt === adelante) {
+      if (cont < imagenes.length - 1) {
+        img.src = imagenes[cont + 1];
+        cont++;
+      } else {
+        img.src = imagenes[0];
+        cont = 0;
+      }
+    }
+  });
+}
+document.addEventListener('DOMcontentLoaded', () => {
+  const contenedor = document.querySelector('.contenedor-carrousel');
+  carrousel(contenedor);
+});
+
+contenedor();
 
 const init = () => {
   document.getElementById('root').innerHTML = login();

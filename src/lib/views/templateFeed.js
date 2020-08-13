@@ -1,3 +1,5 @@
+import { readData } from '../firebase-firestore.js';
+
 export const feed = () => {
   const divFeed = document.createElement('div');
   const viewFeed = `
@@ -28,40 +30,10 @@ export const feed = () => {
     <div class="Post">
       <h2>| Publicaciones recientes</h2>
     </div>
-    <div>
-    <p id="outputPost"></p>
-    </div>
 
-    <div class="container2">
-      <div>
-        <img class="img-post" src="./img/Img-recetas/1.jpg" alt="">
-      </div>
-      <div>
-        <h5>Brocoli gratinado</h5>
-        <div>
-          <i class="far fa-heart icon-feed2"></i>
-        </div>
-        <div>
-          <i class="fas fa-user icon-feed2"></i>
-        </div>
-      </div>
+    <div id="container-feed">
     </div>
-
-    <div class="container2">
-      <div>
-        <img class="img-post" src="./img/Img-recetas/arroz-frito-con-huevo.jpg" alt="">
-      </div>
-      <div class="container-hijo">
-        <h5>Arroz con huevo</h5>
-        <div>
-          <i class="far fa-heart icon-feed2"></i>
-        </div>
-        <div>
-          <i class="fas fa-user icon-feed2"></i>
-        </div>
-      </div>
-    </div>
-
+    
     <div class="container2">
       <div>
         <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
@@ -70,13 +42,21 @@ export const feed = () => {
         <h5>Arroz con salsa</h5>
         <div>
           <i class="far fa-heart icon-feed2"></i>
-        </div>
+        </div> 
         <div>
           <i class="fas fa-user icon-feed2"></i>
         </div>
+        <div class="follow-divbutton">
+          <button class="btn-follow"> <i class="far fa-heart icon-feed2"></i><strong>Seguir</strong></button>
+        </div>
       </div>
+      <a class="details-rcp" href="#/details-rcp">Leer mas...</a>
     </div>
+
   </section> `;
+  readData();
   divFeed.innerHTML = viewFeed;
   return divFeed;
 };
+
+ 

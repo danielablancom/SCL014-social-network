@@ -4,8 +4,8 @@
 export const publicar = (title, diners, timePreparation, steps, ingredients) => {
   console.log('por que me tratas asi');
   const db = firebase.firestore();
-  const user = () => firebase.auth().currentUser;
-
+  const usuario = () => firebase.auth().currentUser;
+  const user = usuario();
   db.collection('recipe').add({
     email: user.email,
     nombre: user.displayName,

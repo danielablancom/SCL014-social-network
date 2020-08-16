@@ -52,41 +52,28 @@ const generateRegisterListener = () => {
 
 // CARROUSEL DE IMAGENES
 
-const imagenes = ['./img/Img-recetas/1.jpg', './img/Img-recetas/2.jpg', './img/Img-recetas/3.jpg', './img/Img-recetas/4.jpg', './img/Img-recetas/5.jpg'];
-let cont = 0;
+/* const buttonPrev = document.getElementById ('button-prev');
+const buttonNext = document.getElementById ('button-next');
+const track = document.getElementById ('track');
+const slickList = document.getElementById ('slcik-list');
+const slick = document.querySelectorAll('.slick');
 
-function carrousel(contenedor) {
-  contenedor.addEventListener('click', (e) => {
-    const atras = contenedor.querySelector('.atras');
-    const adelante = contenedor.querySelector('.adelante');
-    const img = contenedor.querySelector('.img');
-    const tgt = e.target;
+const slickWidth = slick[0].offsetWidth;
 
-    if (tgt === atras) {
-      if (cont > 0) {
-        img.src = imagenes[cont - 1];
-        cont--;
-      } else {
-        img.src = imagenes[imagenes.length - 1];
-        cont = imagenes.length - 1;
-      }
-    } else if (tgt === adelante) {
-      if (cont < imagenes.length - 1) {
-        img.src = imagenes[cont + 1];
-        cont++;
-      } else {
-        img.src = imagenes[0];
-        cont = 0;
-      }
-    }
-  });
-}
-document.addEventListener('DOMcontentLoaded', () => {
-  const contenedor = document.querySelector('.contenedor-carrousel');
-  carrousel(contenedor);
-});
+buttonPrev.onclick = () => Move(1);
+buttonNext.onclick = () => Move(2);
 
-contenedor();
+  function Move(value){
+  const trackWitdth = track.offsetWidth;
+  const listWitdth = slickList.offsetWidth;
+
+  track.style.left == ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0, -2)* -1);
+  if(leftPosition < (trackWitdth - listWitdth) && value ==2){
+    track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
+  } else if(leftPosition > 0 && value ==1){
+    track.style.left = `${-1 * (leftPosition - slickWidth)}px`;
+  }
+} */
 
 const init = () => {
   document.getElementById('root').innerHTML = login();

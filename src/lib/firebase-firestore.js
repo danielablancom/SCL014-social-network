@@ -1,7 +1,7 @@
 // alert('agregado');
 
 // Agregar documentos
-export const publicar = (title, diners, timePreparation, steps, ingredients) => {
+export const publicar = (title, diners, timePreparation, steps, ingredients, photoRecipe) => {
   console.log('');
   const db = firebase.firestore();
   const usuario = () => firebase.auth().currentUser;
@@ -10,6 +10,8 @@ export const publicar = (title, diners, timePreparation, steps, ingredients) => 
     email: user.email,
     nombre: user.displayName,
     uid: user.uid,
+    foto: user.photoURL,
+    fotos: photoRecipe,
     /* seguir: follow,
     gusta: likes, */
     post: {
@@ -45,13 +47,17 @@ export const readData = () => {
         const infoPost = `
       <div id="post-rct" class="container2">
       <div>
+      <div>
+        <img class="img-post" src='${doc.data().fotos.photosRecipe}'>
+      </div>
       <h5>${doc.data().post.titulo}</h5>
       <i class="far fa-heart icon-feed2"></i>
       </div> 
       
       <div class="container3">
           <i class="fas fa-user icon-feed2"></i>
-          <p>Por: ${doc.data().nombre ? doc.data().nombre : doc.data().email}</p>
+          <img class="user-img" src='${doc.data().foto}'>
+            <p>Por: ${doc.data().nombre ? doc.data().nombre : doc.data().email}</p>
         </div>
         <div class="follow-divbutton">
           <button class="btn-follow"> <i class="far fa-heart icon-feed2"><strong>Seguir</strong></i></button>
@@ -65,3 +71,13 @@ export const readData = () => {
     });
 };
 // ${ doc.data().nombre ? doc.data().nombre : doc.data().email }</h3 >
+/* <div>
+        <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
+      </div>
+      <div>
+        <h5>Arroz con salsa</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div>  */
+// Create a reference from a Google Cloud Storage URI
+// var gsReference = storage.refFromURL('gs://bucket/images/stars.jpg');

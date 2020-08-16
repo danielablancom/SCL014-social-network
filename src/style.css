@@ -270,13 +270,14 @@ label{
 }
 .details-rcp :visited{
     color: red;
-}
+}   
 .prueba{
     display: flex;
 }
-
-h7{
-    margin: auto;
+.user-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
 }
 /*CARROUSEL*/
 
@@ -286,7 +287,6 @@ h7{
     height: 100vh;
     align-items: center; */
 }
-
 h4, h6,small, a{
     margin: 0;
     padding: 0;
@@ -300,9 +300,7 @@ line-height: 30px;
 padding-bottom: 24px;
 opacity: .9;
 text-transform: uppercase;
-
 }
-
 h6{
     margin-left: 5%;
     margin-top: 5%;
@@ -319,7 +317,6 @@ h6{
     max-width: hidden;
     overflow: hidden;
 }
-
 .slick-track{
     position:relative;
     top: 0;
@@ -328,7 +325,6 @@ h6{
     justify-content: center;
     transition: .5s ease-in-out;
 }
-
 .slick{
     position: relative;
     width: 275px;
@@ -339,7 +335,6 @@ h6{
     height: 100%;
     
 }
-
 .slick h4{
     position: absolute;
     z-index: 1;
@@ -398,9 +393,6 @@ h6{
 .slick-next{
     right: 0px;
 }
-
-
-
 .icon-like{
     margin-left: 15%;
 }
@@ -438,7 +430,7 @@ input[type="checkbox" i]{
     align-items: center;  
 }
 .container3 p {
-    margin-left: -20px; 
+    margin-left: 11px; 
 }
 @media(min-width:768px)
 {

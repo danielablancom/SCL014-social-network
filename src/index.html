@@ -15,7 +15,7 @@
 
 <body>
   <div id="root"></div>
-  <!--Header 
+  <!--Header
   <header>
     <div class="container-logo">
       <i class="fas fa-chevron-left flecha"></i>
@@ -100,7 +100,7 @@
 
   </section> -->
 
-
+<div class="contendor">
   <header>
     <div class="container-logo">
       <i class="fas fa-chevron-left flecha"></i>
@@ -114,10 +114,67 @@
     </div>
   </header>
 
+  <div class="carousel">
   <h6>BRÓCOLI GRATINADO</h6>
-  <p class="desliza">DESLIZA PARA VER EL PASO A PASO</p>
-  <div class="contenedor">
-    <div class="atras botones">
+    <div class="slick-list" id="slick-list">
+      <button class="slick-arrow slick-prev" id="button-prev">
+        <i class="fas fa-chevron-left flecha"></i>
+      </button>
+      <div class="slick-track" id="track">
+        
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 1</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/2.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 2</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/3.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 3</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/4.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 4</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/5.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="slick-arrow slick-next" id="button-netx">
+        <i class="fas fa-chevron-right flecha"></i>
+      </button>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+<!--     <div class="atras botones">
       <i class="fas fa-chevron-left flecha"></i>
     </div>
     <div class="adelante botones">
@@ -128,13 +185,15 @@
   </div>
   <div>
     <i class="far fa-heart icon-like"></i><i class="fas fa-share-square icon-share"></i>
-  </div>
+  </div> -->
   <div class="pastilla">
     <i class="fas fa-utensils icon-fork"> 4 Personas</i><i class="fas fa-clock icon-clock"> 15 minutos</i>
   </div>
 
 <div class="contenedor">
-<h6>INGREDIENTES:</h6>
+<div>
+<h7><strong>INGREDIENTES:</strong></h7><br>
+</div>
 <input type="checkbox" class="check" name="ingredientes" value="1">1 rama de brócoli de unos 600 g.
 <br>
 <input type="checkbox" class="check" name="ingredientes" value="2" checked>3 cucharadas de aceite de oliva. 
@@ -148,7 +207,7 @@
 <input type="checkbox" class="check" name="ingredientes" value="6">Sal, pimienta, ajo en polvo y nuez moscada.
 </div>
 
-<div class="prueba">
+<!-- <div class="prueba">
   <div>
     <input type="checkbox" name="oli" id="">
     <br>
@@ -160,12 +219,14 @@
       <ul>papa</ul>
     </li>
   </div>
-</div>
+</div> -->
 
   <!--html página publicar post-->
-  <!-- <form>
+  <!-- <div>
+  <form>
     <div class="Container-camera">
-      <i class="fa fa-camera camera" aria-hidden="true"></i>
+      <input type="file" id="file_upload_id" style="display:none">
+      <a><i id="icon_upload" class="fa fa-camera camera" onclick="_upload()"></i></a>
       <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
     </div>
     <div class="container-recipe">
@@ -202,7 +263,16 @@
         <button class="btn" type="submit" id="btn-publish"><strong>Publicar</strong></button>
       </div>
     </div>
-  </form> -->
+  </form>
+</div> 
+
+<script>
+function _upload(){
+    document.getElementById('file_upload_id').click();
+}
+</script> -->
+
+         
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
@@ -210,9 +280,9 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
-
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
 
   <script>
     // Your web app's Firebase configuration
@@ -233,8 +303,8 @@
     firebase.analytics();
       // Initializa Firestore
       //const db = firebase.firestore();
-
-  </script>
+      
+</script>
   <script type="module" src="main.js"></script>
 </body>
 

@@ -69,8 +69,9 @@ export const post = () => {
     const timePreparation = form.querySelector('#time-rct').value;
     const steps = form.querySelector('#steps').value;
     const ingredients = form.querySelector('#ingredient').value;
+    const photoRecipe = form.querySelector('#file_upload_id').value;
 
-    publicar(title, diners, timePreparation, steps, ingredients);
+    publicar(title, diners, timePreparation, steps, ingredients, photoRecipe);
     form.reset();
   });
 

@@ -17,7 +17,8 @@ export const post = () => {
   </header>
   <form id="post-form">
     <div class="Container-camera">
-      <i class="fa fa-camera camera" aria-hidden="true"></i>
+      <input type="file" id="file_upload_id">
+      <progress value="0" max="100" id="uploader">0%</progress>
       <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
     </div>
     <div class="container-recipe">
@@ -51,7 +52,7 @@ export const post = () => {
         </div>
       </div>
       <div class="btn-feed">
-        <button href="#/feed" class="btn" type="submit" id="btn-publish"><strong>Publicar</strong></button>
+        <button href="#/feed" class="btn publish" type="submit" id="btn-publish"><strong>Publicar</strong></button>
       </div>
     </div>
   </form>`;
@@ -81,5 +82,48 @@ export const post = () => {
     };
     return btnClear();
   });
+
+  const uploader = divPost.querySelector('#uploader');
+  const fileButton = divPost.querySelector('#file_upload_id');
+
+  fileButton.addEventListener('change', (e) => {
+    //  divPost.querySelector('#file_upload_id').click();
+    // Traer los elementos
+    const file = e.target.files[0];
+    const metadata = {
+      contentType: 'image/jpeg',
+    };
+    const storage = firebase.app().storage('gs://red-social---easycook.appspot.com');
+    const storageRef = storage.ref();
+    const photosRef = storageRef.child(`photos/${file.name}`).put(file, metadata);
+
+    photosRef.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        uploader.value = progress;
+      }, (error) => {
+        switch (error.code) {
+          case 'storage/unauthorized':
+            // User doesn't have permission to access the object
+            break;
+
+          case 'storage/canceled':
+            // User canceled the upload
+            break;
+
+          case 'storage/unknown':
+            // Unknown error occurred, inspect error.serverResponse
+            break;
+          default:
+            console.log('por que me tratas asi');
+        }
+      }, () => {
+        // Upload completed successfully, now we can get the download URL
+        photosRef.snapshot.ref.getDownloadURL().then((downloadURL) => {
+          console.log('File available at', downloadURL);
+        });
+      });
+  });
+
   return divPost;
 };

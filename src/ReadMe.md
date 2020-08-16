@@ -5,6 +5,9 @@
 * [1. Definición del producto](#1-Definición-del-producto)
 * [2. Principales usuarios del producto](#2-Principales-usuarios-del-producto)
 * [3. Resolucion de problemas al usuario](#3-Resolucion-de-problemas-al-usuario)
+* [4. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)](#4-Diseño-de-la-Interfaz-de-Usuario)
+
+* [5. Prototipo de alta fidelidad](#5-Prototipo-de-alta-fidelidad)
 
 
 ![LOGO](https://raw.githubusercontent.com/PamelaBarboza/SCL014-social-network/master/src/img/iconos/LOGO.jpg)
@@ -21,7 +24,7 @@ La ventaja de esto es evitar cocinar siempre lo mismo, compartiendo recetas con 
 
 Personas de todas las edades y géneros.
 
-## Resolucion de problemas al usuario
+## 3. Resolucion de problemas al usuario
 
 Debido a la situación actual en la que se encuentra la economía de nuestro país, muchas de personas se han visto afectadas ya que han perdido su trabajo o disminuido su porcentaje de ingresos económico. Es por esto que nace "EASYCOOK", una red social para aportar mayor variedad en tus comidas ya que no necesitaran salir a comprar nada, pueden filtrar los ingredientes que tengas en su casa y automáticamente te aparece que podes cocinar.
 
@@ -99,7 +102,15 @@ _Definición de Terminado (DOD):_
 
 * Historia de usuario 5: Yo como usuario quiero poder ver las recetas en detalle.
 
-## Prototipo de alta fidelidad
+## 4. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
+
+
+
+
+
+
+
+## 5. Prototipo de alta fidelidad
 
 Aquí dejamos el link de Figma:
 https://www.figma.com/file/6l0ozVvdeme99TD8RvucnK/EasyCook?node-id=0%3A1

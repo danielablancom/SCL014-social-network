@@ -9,100 +9,301 @@
   <!--Link para usar iconos-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <title>EASYCOOK</title>
+  <link rel="icon" href="./img/iconos/favicon.png">
+
+  <!--<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script> -->
 </head>
 
 <body>
   <div id="root"></div>
+  <!--Header
+  <header>
+    <div class="container-logo">
+      <i class="fas fa-chevron-left flecha"></i>
+      <img class="logo-header" src="./img/iconos/LOGO.jpg">
+    </div>
+    <div class="container-icon">
+      <a href="#/post"><i class="fas fa-plus icon-feed"></i></a>
+      <i class="fas fa-search icon-feed"></i>
+      <i class="fas fa-user icon-feed"></i>
+      <i class="fas fa-filter icon-feed"></i>
+    </div>
+  </header> -->
 
-  <div class="contenedor">
-    <form id="login-form" class="formulario">
+  <!--Feed -->
+  <!-- <section>
+    <div class="imagesFeed">
+      <img class="images" src="./img/Img-recetas/rapido-y-facil.jpg" alt="">
+      <img class="images" src="./img/Img-recetas/comida-saludable.jpg" alt="">
+      <img class="images" src="./img/Img-recetas/comida-vegana.jpg" alt="">
+    </div>
+    <div class="btn-feed">
+      <button class="btn">Rápido y facil</button>
+      <button class="btn">Saludable</button>
+      <button class="btn">Vegano</button>
+    </div>
+
+    <div class="Post">
+      <h2>| Publicaciones recientes</h2>
+    </div>
+
+    <div class="container2">
       <div>
-        <img class="logo" src="./img/iconos/LOGO.jpg">
-      </div>
-      <h1>EASYCOOK</h1>
-      <div class="">
-        <p>Inicia sesión:</p>
-        <div class="input-contenedor">
-          <i class="fas fa-envelope icon"></i>
-          <input type="email" id="login-email" placeholder="E-mail">
-        </div>
-        <div class="input-contenedor">
-          <i class="fas fa-key icon"></i>
-          <input type="password" id="login-password" placeholder="Contraseña">
-        </div>
-        <div class="input-contenedor">
-          <input type="submit" value="Entrar" class="button">
-        </div>
-      </div>
-    </form>
-    <div class="formulario-2">
-      <div class="input-contenedor-google">
-        <i class="fab fa-google icon"></i>
-        <button id="login-google" class="btn-google">Inicia sesión con Google</button>
+        <img class="img-post" src="./img/Img-recetas/1.jpg" alt="">
       </div>
       <div>
-        <p>¿No tienes cuenta?</p>
-        <button class="check-in">Regístrate aqui</button>
+        <h5>Brocoli gratinado</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div>
+        <div>
+          <i class="fas fa-user icon-feed2"></i>
+        </div>
       </div>
+    </div>
+
+    <div class="container2">
+      <div>
+        <img class="img-post" src="./img/Img-recetas/arroz-frito-con-huevo.jpg" alt="">
+      </div>
+      <div class="container-hijo">
+        <h5>Arroz con huevo</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div>
+        <div>
+          <i class="fas fa-user icon-feed2"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div>
+        <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
+      </div>
+      <div>
+        <h5>Arroz con salsa</h5>
+        <div>
+          <i class="far fa-heart icon-feed2"></i>
+        </div> 
+        <div class="container3">
+          <i class="fas fa-user icon-feed2"></i>
+          <p>usuario</p>
+        </div>
+        <div class="follow-divbutton">
+          <button class="btn-follow"> <i class="far fa-heart icon-feed2">Seguir</i><strong></strong></button>
+        </div>
+      </div>
+      <a class="details-rcp" href="#/details-rcp">Leer mas...</a>
+    </div>
+   
+
+
+  </section> -->
+
+<!-- <div class="contendor">
+  <header>
+    <div class="container-logo">
+      <i class="fas fa-chevron-left flecha"></i>
+      <img class="logo-header" src="./img/iconos/LOGO.jpg">
+    </div>
+    <div class="container-icon">
+      <a href="#/post"><i class="fas fa-plus icon-feed"></i></a>
+      <i class="fas fa-search icon-feed"></i>
+      <i class="fas fa-user icon-feed"></i>
+      <i class="fas fa-filter icon-feed"></i>
+    </div>
+  </header>
+
+  <div class="carousel">
+  <h6>BRÓCOLI GRATINADO</h6>
+    <div class="slick-list" id="slick-list">
+      <button class="slick-arrow slick-prev" id="button-prev">
+        <i class="fas fa-chevron-left flecha"></i>
+      </button>
+      <div class="slick-track" id="track">
+        
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 1</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/2.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 2</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/3.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 3</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/4.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="slick">
+          <div>
+            <a href="/">
+              <h4><small>Paso 4</small></h4>
+              <picture>
+                <img src="./img/Img-recetas/5.jpg" alt="image">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="slick-arrow slick-next" id="button-netx">
+        <i class="fas fa-chevron-right flecha"></i>
+      </button>
     </div>
   </div>
-  <!-- html página registro usuario -->
-  <form id="signup-form" class="formulario">
-    <div>
-      <img class="logo" src="./img/iconos/LOGO.jpg">
+  </div>
+</div> -->
+
+
+
+
+<!--     <div class="atras botones">
+      <i class="fas fa-chevron-left flecha"></i>
     </div>
-    <h1>EASYCOOK</h1>
-    <div class="contenedor">
-      <p>Regístrate con tu E-mail:</p>
-      <div class="input-contenedor">
-        <i class="fas fa-user icon"></i>
-        <input type="text" id="singup-username" placeholder="Nombre de usuario" value="" required>
+    <div class="adelante botones">
+      <i class="fas fa-chevron-right flecha"></i>
+    </div>
+
+    <img src="./img/Img-recetas/1.jpg" alt="" id="imagen">
+  </div>
+  <div>
+    <i class="far fa-heart icon-like"></i><i class="fas fa-share-square icon-share"></i>
+  </div> -->
+  <!-- <div class="pastilla">
+    <i class="fas fa-utensils icon-fork"> 4 Personas</i><i class="fas fa-clock icon-clock"> 15 minutos</i>
+  </div>
+
+<div class="contenedor">
+<div>
+<h7><strong>INGREDIENTES:</strong></h7><br>
+</div>
+<input type="checkbox" class="check" name="ingredientes" value="1">1 rama de brócoli de unos 600 g.
+<br>
+<input type="checkbox" class="check" name="ingredientes" value="2" checked>3 cucharadas de aceite de oliva. 
+<br> 
+<input type="checkbox" class="check" name="ingredientes" value="3">100 gr de jamón (puedes usar fiambre de pollo o pavo).
+<br> 
+<input type="checkbox" class="check" name="ingredientes" value=4>100 g de queso rallado grueso.
+<br>
+<input type="checkbox" class="check" name="ingredientes" value="5" checked>1 tazón de salsa bechamel clarita.
+<br> 
+<input type="checkbox" class="check" name="ingredientes" value="6">Sal, pimienta, ajo en polvo y nuez moscada.
+</div> -->
+
+<!-- <div class="prueba">
+  <div>
+    <input type="checkbox" name="oli" id="">
+    <br>
+    <input type="checkbox" name="chao" id="">
+  </div>
+  <div>
+    <li>
+      <ul>queso</ul>
+      <ul>papa</ul>
+    </li>
+  </div>
+</div> -->
+
+  <!--html página publicar post-->
+  <!-- <div>
+  <form>
+    <div class="Container-camera">
+      <input type="file" id="file_upload_id" style="display:none">
+      <a><i id="icon_upload" class="fa fa-camera camera" onclick="_upload()"></i></a>
+      <p>Sube foto de tu propia receta <br> Inspira a otros con tus ideas</p>
+    </div>
+    <div class="container-recipe">
+      <div class="ctn-rct">
+        <input id="title-rct" class="ctn-receta2" type="text" placeholder="Ej: Brócoli gratinado" value=""><br>
+        <label>Comensales<input id="comensales" class="ctn-receta3" type="text" placeholder="Ej: 2 personas"
+            value=""></label><br>
+        <label>Tiempo de preparación<input id="time-rct" class="ctn-receta" type="text" placeholder="Ej: 15 minutos"
+            value=""></label>
       </div>
-      <div class="input-contenedor">
-        <i class="fas fa-envelope icon"></i>
-        <input type="email" id="signup-email" autocomplete="on" placeholder="E-mail" value="" required>
+      <div class="ctn-rct">
+        <h5>INGREDIENTES:</h5>
+        <input id="ingredient" class="ctn-receta2" type="text" placeholder="Ej: 1 rama de brócoli de unos 600gr."
+          value="">
+        <input class="clear" id="clear" type="button" title="Borrar texto" value="X">
+        <input class="ctn-receta2" type="text" placeholder="Ej: 3 cucharadas de aceite de oliva">
+        <input class="clear" id="clear1" type="button" title="Borrar texto" value="X">
+        <div class="add">
+          <i class="fas fa-plus icon-feed"></i>
+          <label>Ingredientes.</label>
+        </div>
       </div>
-      <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
-        <input type="password" id="signup-password" placeholder="Contraseña"
-          oninvalid="setCustomValidity('Tu contraseña debe tener min. 6 caracteres')" value="" required>
+      <div class="ctn-rct">
+        <h5>PASO A PASO:</h5>
+        <input id="steps" class="ctn-receta2" type="text" placeholder="Ej:Cocemos el brocoli al vapor 3 ó 4 min.
+          Lo separamos en arbolitos." value="">
+        <input class="clear" id="clear2" type="button" title="Borrar texto" value="X">
+        <div class="add">
+          <i class="fas fa-plus icon-feed"></i>
+          <label>Paso a paso.</label>
+        </div>
       </div>
-      <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
-        <input type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
-      </div>
-      <div class="input-contenedor">
-        <input type="submit" value="Registrarse" class="button">
+      <div class="btn-feed">
+        <button class="btn" type="submit" id="btn-publish"><strong>Publicar</strong></button>
       </div>
     </div>
   </form>
+</div> 
 
+<script>
+function _upload(){
+    document.getElementById('file_upload_id').click();
+}
+</script> --> 
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
+
   <script>
     // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyChX-DppiakvuefaxODjurMrK29EQ4PfdQ",
-      authDomain: "red-social---easycook.firebaseapp.com",
-      databaseURL: "https://red-social---easycook.firebaseio.com",
-      projectId: "red-social---easycook",
-      storageBucket: "red-social---easycook.appspot.com",
-      messagingSenderId: "1063020391578",
-      appId: "1:1063020391578:web:4970c3e0893c40298dc323",
-      measurementId: "G-F4ES2DG92M"
+    const firebaseConfig = {
+      apiKey: 'AIzaSyChX-DppiakvuefaxODjurMrK29EQ4PfdQ',
+      authDomain: 'red-social---easycook.firebaseapp.com',
+      databaseURL: 'https://red-social---easycook.firebaseio.com',
+      projectId: 'red-social---easycook',
+      storageBucket: 'red-social---easycook.appspot.com',
+      messagingSenderId: '1063020391578',
+      appId: '1:1063020391578:web:4970c3e0893c40298dc323',
+      measurementId: 'G-F4ES2DG92M',
     };
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     firebase.analytics();
-  </script>
-  <!--Aqui finaliza-->
+      // Initializa Firestore
+      //const db = firebase.firestore();
+      
+</script>
   <script type="module" src="main.js"></script>
 </body>
 

@@ -54,7 +54,16 @@ h1{
 .icon{
     min-width: 50px;
     text-align: center;
-    color: #999;
+    color: #000;
+}
+.google-icon{
+    min-width: 22px;
+    width: 5%;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    float: left;
+
 }
 .icon-feed{
     min-width: 50px;
@@ -91,20 +100,20 @@ h1{
     width: 70%;
     color: black;
     font-size: 0.9em;
-    padding: 15px;
+    padding: 11px;
     cursor: pointer;
 }
 .input-contenedor-google{
     margin-bottom: 15px;
-    border: 1px solid #FF9635;
+    border: 2px solid #FF9635;
 }
 .check-in{
     border: none;
     width: 100%;
-    height: 5%;
-    color: black;
-    font-size: 0.9em;
-    background:#999;
+    height: 10%;
+    color: #fff;
+    font-size: 1em;
+    background: rgb(114, 112, 112);
     padding: 10px 15px;
     cursor: pointer;
 }

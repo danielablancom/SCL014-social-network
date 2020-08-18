@@ -30,9 +30,9 @@ export const register = () => {
         <input class="input-init" type="password" id="signup-password2" placeholder="Confirma tu contraseña" value="" required>
       </div>
       <div class="input-contenedor">
-        <!-- a href no funciona porque está dentro del form -->
         <input id="btn-register" type="submit" value="Registrarse" class="button">
       </div>
+      <p>Ya estás registrado?<a href="#/login"> Inicia sesión aquí</a></p>
     </div>
   </form>
     `;

@@ -17,18 +17,18 @@ export const login = () => {
           <input class="input-init" type="password" id="login-password" placeholder="Contraseña">
         </div>
         <div class="input-contenedor">
-          <a href="#/feed"><input type="submit" value="Entrar" class="button"></a>
+          <a href="#/feed"><input type="submit" value="Inicia sesión" class="button"></a>
         </div>
       </div>
     </form>
     <div class="formulario-2">
       <div class="input-contenedor-google">
-        <i class="fab fa-google icon"></i>
+      <img class="google-icon" src="./img/iconos/logo-google.png">
         <button id="login-google" class="btn-google">Inicia sesión con Google</button>
       </div>
       <div>
         <p>¿No tienes cuenta?</p>
-        <a id="btn-register" href="#/register"><button class="check-in">Regístrate aqui</button></a>
+        <a id="btn-register" href="#/register"><button class="check-in">Regístrate aquí</button></a>
       </div>
     </div>
   </div>`;

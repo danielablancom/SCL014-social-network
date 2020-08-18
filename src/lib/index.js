@@ -5,9 +5,7 @@
 /* eslint-disable no-unused-vars */
 
 // aqui exportaras las funciones que necesites
-
 export const myFunction = () => {
-  //  console.log('Hola');
 };
 
 // SingUp
@@ -15,7 +13,6 @@ export const registerFirebase = (signupEmail, signupPassword) => {
   auth
     .createUserWithEmailAndPassword(signupEmail, signupPassword)
     .then(() => {
-      console.log();
       const configuration = {
         url: 'http://localhost:5000/',
       };
@@ -48,7 +45,6 @@ export const registerFirebase = (signupEmail, signupPassword) => {
 // Obtener el perfil de un usuario
 const userInformation = () => {
   const user = firebase.auth().currentUser;
-  console.log(user, 'entre a la funcion');
   let name; let email; let photoUrl; let uid; let
     emailVerified;
 
@@ -81,7 +77,6 @@ export const signInFirebase = async (email, password) => {
     userInformation();
     window.location.hash = ('#/feed');
   } catch (error) {
-    console.log('error', error);
     const errorCode = error.code;
     if (errorCode === 'auth/wrong-password') {
       alert('La contraseña es incorrecta');
@@ -91,28 +86,15 @@ export const signInFirebase = async (email, password) => {
   }
 };
 
-// .then(() => {
-//   userInformation();
-//   window.location.hash = ('#/feed');
-// })
-// .catch((error) => {
-//   const errorCode = error.code;
-//   if (errorCode === 'auth/wrong-password') {
-//     alert('La contraseña es incorrecta');
-//   } else if (errorCode === 'auth/user-not-found'); {
-//     alert('El usuario es incorrecto o no está registrado');
-//   }
-// });
-
 // Singin with google
 export const googleProvider = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider).then((result) => {
+  firebase.auth().signInWithPopup(provider).then((/* result */) => {
     userInformation();
     window.location.hash = ('#/feed');
-    // This gives you a Google Access Token.
-    const token = result.credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
+    // // This gives you a Google Access Token.
+    // const token = result.credential.accessToken;
+    // // The signed-in user info.
+    // const user = result.user;
   });
 };

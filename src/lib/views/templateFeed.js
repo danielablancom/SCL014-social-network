@@ -1,4 +1,4 @@
-import { readData } from '../firebase-firestore.js';
+import { readData, orderPublish } from '../firebase-firestore.js';
 
 export const feed = () => {
   const divFeed = document.createElement('div');
@@ -27,39 +27,17 @@ export const feed = () => {
       <button class="btn">Vegano</button>
     </div>
 
-    <div class="Post">
+    <div class="PostRec">
       <h2>| Publicaciones recientes</h2>
     </div>
 
     <div id="container-feed">
     </div>
-    
-    <div class="container2">
-      <div>
-        <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
-      </div>
-      <div>
-        <h5>Arroz con salsa</h5>
-        <div>
-          <i class="far fa-heart icon-feed2"></i>
-        </div> 
-        <div>
-          <i class="fas fa-user icon-feed2"></i>
-        </div>
-        <div class="follow-divbutton">
-          <button class="btn-follow"> <i class="far fa-heart icon-feed2"></i><strong> Seguir</strong></button>
-        </div>
-      </div>
-      <a href="#/detailsRcp" class="details-rcp" >Leer mas...</a>
-    </div>
 
   </section> `;
   readData();
-  divFeed.innerHTML = viewFeed;
+  // orderPublish();
 
-  // const btnPlus = divFeed.querySelector('#go-form-recipe');
-  // btnPlus.addEventListener('click', () => {
-  //   imprimirFotos();
-  // });
+  divFeed.innerHTML = viewFeed;
   return divFeed;
 };

@@ -25,7 +25,9 @@ const showTemplate = (hash) => {
       containerRoot.appendChild(post());
       break;
     case '#/detailsRcp':
-      containerRoot.body.appendChild(detailsRcp());
+      // containerRoot.appendChild(register());
+
+      containerRoot.appendChild(detailsRcp());
       break;
     default:
       containerRoot.innerHTML = '<h2>Error</h2>';

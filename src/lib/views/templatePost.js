@@ -5,8 +5,7 @@ export const post = () => {
   const viewPost = `
   <header>
     <div class="container-logo">
-      <i class="fas fa-chevron-left flecha"></i>
-      <img class="logo-header" src="./img/iconos/LOGO.jpg">
+      <a href="#/feed"><img class="logo-header" src="./img/iconos/LOGO.jpg"></a>
     </div>
     <div class="container-icon">
       <a href="#/post"><i class="fas fa-plus icon-feed"></i></a>

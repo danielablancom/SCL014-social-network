@@ -60,7 +60,7 @@ _Definición de Terminado (DOD):_
 - Usar Eslint.
 - Desplegaron su aplicación y etiquetaron la versión (git tag).
 
-- Historia de usuario 2: Yo como usuario quiero poder iniciar sesión con mi correo electrónico para acceder a la app y iniciar sesión con google.
+### Historia de usuario 2: Yo como usuario quiero poder iniciar sesión con mi correo electrónico para acceder a la app y iniciar sesión con google.
 
 _Criterios de aceptación:_
 
@@ -85,7 +85,7 @@ _Definición de Terminado (DOD):_
 - Usar Eslint.
 - Desplegaron su aplicación y etiquetaron la versión (git tag).
 
-- Historia de usuario 4: Yo como usuario quiero poder ver todas las recetas de la página principal.
+### Historia de usuario 3: Yo como usuario quiero poder ver todas las recetas de la página principal.
 
 _Criterios de aceptación:_
 
@@ -107,7 +107,7 @@ _Definición de Terminado (DOD):_
 - Usar Eslint.
 - Desplegaron su aplicación y etiquetaron la versión (git tag).
 
-- Historia de usuario 5: Yo como usuario quiero poder ver las recetas en detalle.
+### Historia de usuario 4: Yo como usuario quiero poder ver las recetas en detalle.
 
 ## 4. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 

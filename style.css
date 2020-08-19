@@ -37,7 +37,9 @@ h2 {
   margin-left: 18px;
   margin-top: 20px;
 }
-h4, small, a {
+h4,
+small,
+a {
   margin: 0;
   padding: 0;
 }
@@ -64,7 +66,7 @@ p {
   font-size: 0.8em;
 }
 
-/* Iconos */ 
+/* Iconos */
 .icon {
   min-width: 50px;
   text-align: center;
@@ -91,6 +93,9 @@ p {
   min-width: 50px;
   margin-left: 2%;
   color: rgb(0, 0, 0);
+}
+.icon-feed2 :active {
+  color: #d86c07;
 }
 .icon-fork {
   margin-left: 15%;
@@ -124,9 +129,9 @@ p {
 }
 h6 {
   padding: 0%;
-  margin: 0%; 
-  float: left; 
-  margin-left: 10%;
+  margin: 0%;
+  float: left;
+  margin-left: 13%;
   font-size: 16px;
 }
 .container4 {
@@ -135,7 +140,7 @@ h6 {
   justify-content: space-between;
 }
 .container-icon2 {
- margin-left: 5%;  
+  margin-left: 13%;
 }
 
 /* Images */
@@ -153,19 +158,19 @@ h6 {
 }
 .img-post {
   padding: 10px;
-    width: 96%;
-    height: 108%;
-    height: 108%;
-    object-position: center center;
-    object-fit: cover;
+  width: 96%;
+  height: 108%;
+  height: 108%;
+  object-position: center center;
+  object-fit: cover;
 }
 #detail-RecipeImg {
-  padding: 40px;
-    width: 100%;
-    height: 108%;
-    height: 108%;
-    object-position: center center;
-    object-fit: cover;
+  padding: 15px 40px;
+  width: 100%;
+  height: 108%;
+  height: 108%;
+  object-position: center center;
+  object-fit: cover;
 }
 .user-img {
   width: 30px;
@@ -193,11 +198,11 @@ h6 {
   margin-bottom: 5%;
   height: 132px;
 }
-.container-photo{
-    max-width: 42%;
-    object-position: center center;
-    object-fit: cover;
-    height: 116px;
+.container-photo {
+  max-width: 42%;
+  object-position: center center;
+  object-fit: cover;
+  height: 116px;
 }
 .Container-camera {
   width: 100%;
@@ -296,13 +301,17 @@ h6 {
   width: 100%;
   justify-content: space-around;
 }
-.btn-like{
-    border: none;
-    background: none;
-    outline: 0px;
-    margin-left: -8%;
-    cursor:pointer;
+.btn-like {
+  border: none;
+  background: none;
+  outline: 0px;
+  margin-left: -8%;
+  cursor: pointer;
 }
+.heart:hover {
+  color: orangered;
+}
+
 /* Botón de registro */
 .check-in {
   border: none;
@@ -347,7 +356,7 @@ h6 {
   color: black;
 }
 /* Text-area */
-.texta-receta2{
+.texta-receta2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9em;
   border: none;
@@ -356,7 +365,6 @@ h6 {
   margin-bottom: 2%;
   background-color: #e5e5e5;
 }
-
 /* flecha */
 #arrow {
   margin: 0 0 0 0.25rem;
@@ -372,19 +380,30 @@ h6 {
 .post {
   display: flex;
 }
-.text-ingredient, .check{
-  font-size : 1.0em;
+.text-ingredient,
+.check {
+  font-size: 1em;
 }
-.text-ingredient{
-font-weight:bold;
+.text-ingredient {
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
-  .formulario, .formulario-2, header, .imagesFeed, .btn-feed, .container2, .Container-camera, .container-recipe {
-    margin-top: 0;
-    margin: auto;
-    width: 500px;
-  }
+  .formulario,
+  .formulario-2,
+  header,
+  .imagesFeed,
+  .btn-feed,
+  .container2,
+  .Container-camera,
+  .container-recipe,
+  .container4,
+  .img-recipePost,
+  .container-icon2,
+  .pastilla,
+  .contenedor,
+
+  
   h2 {
     margin-top: 0;
     margin: auto;
@@ -408,5 +427,14 @@ font-weight:bold;
     margin-top: 2%;
     margin-left: 16%;
     float: left;
-}
+  }
+  .container4{
+    margin-top:1%;
+  }
+
+  .container-icon2,{
+    margin-left: 5%;
+  }
+
+
 }

@@ -65,7 +65,7 @@ export const readData = () => {
 
         return resolve(result);
       })
-      .catch((err) => reject(err));
+      .catch(err => reject(err));
   });
 };
 
@@ -106,8 +106,8 @@ export const savePhoto = (file, metadata) => {
         () => {
           photosRef.snapshot.ref
             .getDownloadURL()
-            .then((downloadURL) => resolve(downloadURL));
-        }
+            .then(downloadURL => resolve(downloadURL));
+        },
       );
     } catch (error) {
       console.log('error', error);
@@ -145,7 +145,7 @@ export const addLikeToPost = async (receipe) => {
 
     // si existe el like del usuario sacalo
     if (reciepeInDB.data().post.likes.includes(user.email)) {
-      const likes = receipe.post.likes.filter((elem) => elem !== user.email);
+      const likes = receipe.post.likes.filter(elem => elem !== user.email);
 
       await ref.update({
         ...receipe,

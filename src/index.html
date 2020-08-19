@@ -1,168 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
+    <title>EASYCOOK</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./img/iconos/favicon.png" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <title>EASYCOOK</title>
-  <link rel="icon" href="./img/iconos/favicon.png">
-
-</head>
-
-<body>
-  <div id="root"></div>
-<!-- 
-  <div class="contendor">
-    <header>
-      <div class="container-logo">
-        <i class="fas fa-chevron-left flecha"></i>
-        <img class="logo-header" src="./img/iconos/LOGO.jpg">
-      </div>
-      <div class="container-icon">
-        <a href="#/post"><i class="fas fa-plus icon-feed"></i></a>
-        <i class="fas fa-search icon-feed"></i>
-        <i class="fas fa-user icon-feed"></i>
-        <i class="fas fa-filter icon-feed"></i>
-      </div>
-    </header> -->
-
-    <!-- <div class="carousel">
-      <h6>BRÓCOLI GRATINADO</h6>
-      <div class="slick-list" id="slick-list">
-        <button class="slick-arrow slick-prev" id="button-prev">
-          <i class="fas fa-chevron-left flecha"></i>
-        </button>
-        <div class="slick-track" id="track">
-
-          <div class="slick">
-            <div>
-              <a href="/">
-                <h4><small>Paso 1</small></h4>
-                <picture>
-                  <img src="./img/Img-recetas/2.jpg" alt="image">
-                </picture>
-              </a>
-            </div>
-          </div>
-          <div class="slick">
-            <div>
-              <a href="/">
-                <h4><small>Paso 2</small></h4>
-                <picture>
-                  <img src="./img/Img-recetas/3.jpg" alt="image">
-                </picture>
-              </a>
-            </div>
-          </div>
-          <div class="slick">
-            <div>
-              <a href="/">
-                <h4><small>Paso 3</small></h4>
-                <picture>
-                  <img src="./img/Img-recetas/4.jpg" alt="image">
-                </picture>
-              </a>
-            </div>
-          </div>
-          <div class="slick">
-            <div>
-              <a href="/">
-                <h4><small>Paso 4</small></h4>
-                <picture>
-                  <img src="./img/Img-recetas/5.jpg" alt="image">
-                </picture>
-              </a>
-            </div>
-          </div>
-        </div>
-        <button class="slick-arrow slick-next" id="button-netx">
-          <i class="fas fa-chevron-right flecha"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-
-  <div class="atras botones">
-    <i class="fas fa-chevron-left flecha"></i>
-  </div>
-  <div class="adelante botones">
-    <i class="fas fa-chevron-right flecha"></i>
-  </div> -->
-    <!-- 
-  <img src="./img/Img-recetas/1.jpg" alt="" id="imagen">
-  </div> -->
-
-    <!-- <div>
-      <img src="" alt="">
-    </div>
-    <div>
-      <i class="far fa-heart icon-like"></i><i class="fas fa-share-square icon-share"></i>
-    </div>
-    <div class="pastilla">
-      <i class="fas fa-utensils icon-fork"> 4 Personas</i><i class="fas fa-clock icon-clock"> 15 minutos</i>
-    </div>
-
-    <div class="contenedor">
-      <div>
-        <h7><strong>Ingredientes:</strong></h7>
-      </div>
-      <div>
-        <input type="checkbox" class="check" value="">1 rama de brócoli de unos 600 g.
-        <br>
-        <input type="checkbox" class="check" value="">3 cucharadas de aceite de oliva.
-        <br>
-        <input type="checkbox" class="check" value="">100 gr de jamón (puedes usar fiambre de pollo o
-        pavo).
-        <br>
-        <input type="checkbox" class="check" value="">100 g de queso rallado grueso.
-        <br>
-        <input type="checkbox" class="check" value="">1 tazón de salsa bechamel clarita.
-        <br>
-        <input type="checkbox" class="check" value="">Sal, pimienta, ajo en polvo y nuez moscada.
-      </div>
-    </div>
-
-    <div class="contenedor">
-      <div>
-        <h7><strong>Paso a paso:</strong></h7>
-      </div>
-      <div>
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
-      </div>
-    </div> -->
-
-    <!-- <div class="prueba">
-  <div>
-    <input type="checkbox" name="oli" id="">
-    <br>
-    <input type="checkbox" name="chao" id="">
-  </div>
-  <div>
-    <li>
-      <ul>queso</ul>
-      <ul>papa</ul>
-    </li>
-  </div>
-</div> -->
+  <body>
+    <div id="root"></div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+    https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
@@ -186,8 +42,7 @@
       const auth = firebase.auth();
       firebase.analytics();
     </script>
+
     <script type="module" src="main.js"></script>
-
-</body>
-
+  </body>
 </html>

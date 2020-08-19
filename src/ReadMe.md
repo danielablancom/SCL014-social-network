@@ -174,10 +174,6 @@ _Buscar_
 
 ![AF](https://raw.githubusercontent.com/danielablancom/SCL014-social-network/easy/src/img/prototipo-alta-fidelidad/AF.jpg)
 
-## 6. Colores
-
-Para la creación la red social, decidimos utilizar principalmente el color naranja
-
 ## 7. Recursos
 
 - Sketch ([Bocetos](https://drive.google.com/drive/u/0/folders/1GzpqurBatOYtVJPRrUJ2c6SgliLzCJl3))

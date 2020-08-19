@@ -1,4 +1,4 @@
-import { readData } from '../firebase-firestore.js';
+import { readData, addLikeToPost } from '../firebase-firestore.js';
 
 export const feed = () => {
   const divFeed = document.createElement('div');
@@ -27,34 +27,67 @@ export const feed = () => {
       <button class="btn">Vegano</button>
     </div>
 
-    <div class="Post">
+    <div class="PostRec">
       <h2>| Publicaciones recientes</h2>
     </div>
 
     <div id="container-feed">
     </div>
-    
-    <div class="container2">
-      <div>
-        <img class="img-post" src="./img/Img-recetas/arroz-con-salsa.jpg" alt="">
-      </div>
-      <div>
-        <h5>Arroz con salsa</h5>
-        <div>
-          <i class="far fa-heart icon-feed2"></i>
-        </div> 
-        <div>
-          <i class="fas fa-user icon-feed2"></i>
-        </div>
-        <div class="follow-divbutton">
-          <button class="btn-follow"> <i class="far fa-heart icon-feed2"></i><strong>Seguir</strong></button>
-        </div>
-      </div>
-      <a class="details-rcp" href="#/details-rcp">Leer mas...</a>
-    </div>
 
   </section> `;
-  readData();
+  readData().then((receipes) => {
+    const muestrame = document.getElementById('container-feed');
+    receipes.forEach((receipe, index) => {
+      const data = `
+      <div id="post-rct" class="container2">
+      <div class="post">
+      <div>
+        <img class="img-post" src='${receipe.post.foto}'>
+      </div>
+
+      <div>
+      <h5>${receipe.post.titulo}</h5>
+      <button class="btn-like"><i class="far fa-heart icon-feed2" index="${index}" ></i></button>
+       <div class="container3">
+        <img class="user-img" src='${
+          receipe.foto ? receipe.foto : '../img/iconos/cook.jpg'
+        }'>
+        <p>Por: ${receipe.nombre ? receipe.nombre : receipe.email}</p>
+      </div>
+      <div class="follow-divbutton">
+        <button class="btn-follow"> <i class="fas fa-user icon-feed2"> Seguir</i></button>
+      </div>
+      <a class="details-rcp" href="#/detailsRcp">Leer más...</a>
+      </div> 
+      </div>
+      </div>`;
+
+      muestrame.innerHTML += data;
+    });
+
+    const test = muestrame.querySelectorAll('.btn-like');
+
+    test.forEach((el) =>
+      el.addEventListener('click', (event) => {
+        const position = event.target.getAttribute('index');
+
+        addLikeToPost(receipes[position]);
+
+        // llamar a la funcion de firebase-firestore addLikeToPost
+        // esta funcion va a recibir como parametro el id del post y el usuario
+        // la receta ahora debe tener un nuevo atributo llado likes
+        // donde se va a guardar el nombre del usuario que le dio like
+        /*
+        post: {
+          likes: ['usuario1']
+        }
+        */
+      })
+    );
+  });
+  // orderPublish();
+
   divFeed.innerHTML = viewFeed;
+
   return divFeed;
 };

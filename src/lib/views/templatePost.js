@@ -1,12 +1,11 @@
-import { publicar } from '../firebase-firestore.js';
+import { publicar, savePhoto } from '../firebase-firestore.js';
 
 export const post = () => {
   const divPost = document.createElement('div');
   const viewPost = `
   <header>
     <div class="container-logo">
-      <i class="fas fa-chevron-left flecha"></i>
-      <img class="logo-header" src="./img/iconos/LOGO.jpg">
+      <a href="#/feed"><img class="logo-header" src="./img/iconos/LOGO.jpg"></a>
     </div>
     <div class="container-icon">
       <a href="#/post"><i class="fas fa-plus icon-feed"></i></a>
@@ -60,6 +59,7 @@ export const post = () => {
   divPost.innerHTML = viewPost;
 
   const form = divPost.querySelector('#post-form');
+  let imageToPost = '';
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -69,10 +69,14 @@ export const post = () => {
     const timePreparation = form.querySelector('#time-rct').value;
     const steps = form.querySelector('#steps').value;
     const ingredients = form.querySelector('#ingredient').value;
-    const photoRecipe = form.querySelector('#file_upload_id').value;
 
-    publicar(title, diners, timePreparation, steps, ingredients, photoRecipe);
-    form.reset();
+
+    if (!imageToPost || !title || !diners || !timePreparation || !steps || !ingredients) {
+      alert('Debes ingresar todos los campos');
+    } else {
+      publicar(title, diners, timePreparation, steps, ingredients, imageToPost);
+      form.reset();
+    }
   });
 
   // Borrar valores del input ingredientes.
@@ -84,7 +88,6 @@ export const post = () => {
     return btnClear();
   });
 
-  const uploader = divPost.querySelector('#uploader');
   const fileButton = divPost.querySelector('#file_upload_id');
 
   fileButton.addEventListener('change', (e) => {
@@ -94,37 +97,22 @@ export const post = () => {
     const metadata = {
       contentType: 'image/jpeg',
     };
-    const storage = firebase.app().storage('gs://red-social---easycook.appspot.com');
-    const storageRef = storage.ref();
-    const photosRef = storageRef.child(`photos/${file.name}`).put(file, metadata);
 
-    photosRef.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-      (snapshot) => {
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        uploader.value = progress;
-      }, (error) => {
-        switch (error.code) {
-          case 'storage/unauthorized':
-            // User doesn't have permission to access the object
-            break;
-
-          case 'storage/canceled':
-            // User canceled the upload
-            break;
-
-          case 'storage/unknown':
-            // Unknown error occurred, inspect error.serverResponse
-            break;
-          default:
-            console.log('por que me tratas asi');
-        }
-      }, () => {
-        // Upload completed successfully, now we can get the download URL
-        photosRef.snapshot.ref.getDownloadURL().then((downloadURL) => {
-          console.log('File available at', downloadURL);
-        });
-      });
+    savePhoto(file, metadata).then((imageToRender) => {
+      imageToPost = imageToRender;
+    });
   });
+
+  /* const uploader = divPost.querySelector('#uploader');
+  const fileButton = divPost.querySelector('#file_upload_id');
+
+  fileButton.addEventListener('change', (e) => {
+    //  divPost.querySelector('#file_upload_id').click();
+    // Traer los elementos
+    const file = e.target.files[0];
+    const metadata = {
+      contentType: 'image/jpeg',
+    }; */
 
   return divPost;
 };

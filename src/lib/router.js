@@ -2,12 +2,16 @@ import { login } from './views/templateLogin.js';
 import { register } from './views/templateRegister.js';
 import { feed } from './views/templateFeed.js';
 import { post } from './views/templatePost.js';
+import { detailsRcp } from './views/templateDetailsRcp.js';
 
 const showTemplate = (hash) => {
   const containerRoot = document.getElementById('root');
   containerRoot.innerHTML = '';
 
   switch (hash) {
+    case '#/':
+      login();
+      break;
     case '#/login':
       containerRoot.appendChild(login());
       break;
@@ -20,13 +24,20 @@ const showTemplate = (hash) => {
     case '#/post':
       containerRoot.appendChild(post());
       break;
+    case '#/detailsRcp':
+      // containerRoot.appendChild(register());
+
+      containerRoot.appendChild(detailsRcp());
+      break;
     default:
       containerRoot.innerHTML = '<h2>Error</h2>';
   }
 };
 
 export const changeRoute = (hash) => {
-  if (hash === '#/login') {
+  if (hash === '#/') {
+    return showTemplate(hash);
+  } if (hash === '#/login') {
     return showTemplate(hash);
   } if (hash === '#/register') {
     return showTemplate(hash);
@@ -34,6 +45,7 @@ export const changeRoute = (hash) => {
     return showTemplate(hash);
   } if (hash === '#/post') {
     return showTemplate(hash);
-  }
-  return showTemplate(hash);
+  } if (hash === '#/detailsRcp') {
+    return showTemplate(hash);
+  } return showTemplate(hash);
 };

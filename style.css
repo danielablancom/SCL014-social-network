@@ -1,6 +1,3 @@
-.not-visible {
-  display: none;
-}
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -14,43 +11,60 @@ header {
   border-bottom: 1px solid rgb(0, 0, 0);
   display: flex;
 }
-.logo-header {
-  width: 20%;
-  margin-left: 3%;
-}
-.contenedor {
-  width: 100%;
-  padding: 20px;
-}
+
+/* Logo */
 .logo {
   width: 50%;
   margin-left: 22%;
 }
-.formulario {
-  margin-top: 40px;
-  padding: 20px;
+.logo-header {
+  width: 20%;
+  margin-left: 3%;
+  width: 50%;
 }
-.formulario-2 {
-  padding: 20px;
-  padding-top: 0px;
+.container-logo {
+  display: flex;
 }
+
+/* Titulos y letras */
 h1 {
   text-align: center;
   color: #1a2537;
   font-size: 1.5em;
 }
-.input-init {
+h2 {
+  font-size: 0.7em;
+  margin-left: 18px;
+  margin-top: 20px;
+}
+h4, small, a {
+  margin: 0;
+  padding: 0;
+}
+h5 {
+  margin: 8px;
+}
+label {
   font-size: 0.9em;
-  padding: 10px;
-  border: none;
-  width: 80%;
-  text-align: left;
-  margin-bottom: 2%;
 }
-.input-contenedor {
-  margin-bottom: 15px;
-  border: 1px solid #aaa;
+.details-rcp {
+  font-size: 0.8em;
+  color: black;
+  margin-left: 136px;
+  margin-top: -5%;
+  display: flex;
 }
+.details-rcp :hover {
+  color: #d86c07;
+}
+.details-rcp :visited {
+  color: red;
+}
+p {
+  font-size: 0.8em;
+}
+
+/* Iconos */ 
 .icon {
   min-width: 50px;
   text-align: center;
@@ -69,69 +83,62 @@ h1 {
   text-align: right;
   color: rgb(0, 0, 0);
 }
-.logo-header {
-  width: 50%;
-}
-.container-logo {
-  display: flex;
-}
 .container-icon {
   display: flex;
   align-items: center;
 }
-.flecha {
+.icon-feed2 {
+  min-width: 50px;
+  margin-left: 2%;
   color: rgb(0, 0, 0);
-  align-items: center;
-  padding-top: 10%;
 }
-.button {
-  border: none;
+.icon-fork {
+  margin-left: 15%;
+  font-size: 15px;
+  padding: 5%;
+  flex-direction: row;
+}
+.icon-clock {
+  margin-left: 2%;
+  padding: 5%;
+  font-size: 15px;
+  flex-direction: row;
+}
+.icon-share {
+  margin-left: 10%;
+}
+.add {
+  margin-left: -34px;
+  margin-bottom: 5%;
+}
+.icon-detail {
+  margin-left: 10%;
+}
+.containerDetail-icon {
+  justify-content: flex-end;
+  display: flex;
+  margin-right: 10%;
+}
+.container-title {
   width: 100%;
-  color: black;
-  font-size: 1em;
-  background: #ff9635;
-  padding: 10px 15px;
-  cursor: pointer;
 }
-.btn-google {
-  border: none;
-  background: #ffffff;
-  width: 70%;
-  color: black;
-  font-size: 0.9em;
-  padding: 11px;
-  cursor: pointer;
+h6 {
+  padding: 0%;
+  margin: 0%; 
+  float: left; 
+  margin-left: 10%;
+  font-size: 16px;
 }
-.input-contenedor-google {
-  margin-bottom: 15px;
-  border: 2px solid #ff9635;
+.container4 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
 }
-.check-in {
-  border: none;
-  width: 100%;
-  height: 10%;
-  color: #fff;
-  font-size: 1em;
-  background: rgb(114, 112, 112);
-  padding: 10px 15px;
-  cursor: pointer;
+.container-icon2 {
+ margin-left: 5%;  
 }
-p {
-  font-size: 0.8em;
-}
-h2 {
-  font-size: 0.7em;
-  margin-left: 18px;
-  margin-top: 20px;
-}
-#arrow {
-  margin: 0 0 0 0.25rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-decoration: none;
-  align-self: flex-start;
-  color: black;
-}
+
+/* Images */
 .imagesFeed {
   display: flex;
   flex-direction: row;
@@ -144,23 +151,40 @@ h2 {
   width: 110px;
   height: 88px;
 }
-.btn {
-  border: none;
-  width: 110px;
-  height: 40px;
-  color: black;
-  font-size: 0.9em;
-  background: #ff9635;
-  cursor: pointer;
+.img-post {
+  padding: 10px;
+    width: 96%;
+    height: 108%;
+    height: 108%;
+    object-position: center center;
+    object-fit: cover;
 }
-.publish {
-  margin-top: 40px;
+#detail-RecipeImg {
+  padding: 40px;
+    width: 100%;
+    height: 108%;
+    height: 108%;
+    object-position: center center;
+    object-fit: cover;
 }
-.btn-feed {
-  display: flex;
-  flex-direction: row;
+.user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+/* Containers */
+.contenedor {
   width: 100%;
-  justify-content: space-around;
+  padding: 20px;
+}
+.formulario {
+  margin-top: 40px;
+  padding: 20px;
+}
+.formulario-2 {
+  padding: 20px;
+  padding-top: 0px;
 }
 .container2 {
   width: 100%;
@@ -169,48 +193,23 @@ h2 {
   margin-bottom: 5%;
   height: 132px;
 }
-.img-post {
-  padding: 10px;
-  width: 126px;
-  height: 100px;
+.container-photo{
+    max-width: 42%;
+    object-position: center center;
+    object-fit: cover;
+    height: 116px;
 }
-.post {
-  display: flex;
-}
-h5 {
-  margin: 8px;
-}
-.icon-feed2 {
-  min-width: 50px;
-  margin-left: 2%;
-  color: rgb(0, 0, 0);
-}
-
 .Container-camera {
-  margin-top: 20px;
   width: 100%;
   height: 100%;
   background-color: #e5e5e5;
   text-align: center;
   border: none;
 }
-.camera {
-  color: rgb(0, 0, 0);
-  width: 100%;
-  height: 100%;
-  font-size: 3em;
-  text-align: center;
-  cursor: pointer;
-}
 .container-recipe {
-  padding: 0 20px;
+  padding: 10px 20px;
   text-align: left;
   padding-left: 33px;
-}
-.clear {
-  border: none;
-  background: none;
-  color: black;
 }
 .ctn-receta {
   font-size: 0.9em;
@@ -244,17 +243,76 @@ h5 {
   margin-bottom: 2%;
   background-color: #e5e5e5;
 }
-.add {
-  margin-left: -34px;
-  margin-bottom: 5%;
+.container3 {
+  display: flex;
+  align-items: center;
 }
-label {
-  font-size: 0.9em;
+.container3 p {
+  margin-left: 11px;
+}
+.pastilla {
+  width: 100%;
+  height: 50px;
+  background: #ff9635;
+  margin-top: 5%;
 }
 .follow-divbutton {
   display: flex;
   margin-right: 60px;
   height: 30px;
+}
+
+/* Botones */
+.button {
+  border: none;
+  width: 100%;
+  color: black;
+  font-size: 1em;
+  background: #ff9635;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.btn-google {
+  border: none;
+  background: #ffffff;
+  width: 70%;
+  color: black;
+  font-size: 0.9em;
+  padding: 11px;
+  cursor: pointer;
+}
+.btn {
+  border: none;
+  width: 110px;
+  height: 30px;
+  color: rgb(30, 50, 50);
+  font-size: 0.9em;
+  background: #ff9635;
+  cursor: pointer;
+}
+.btn-feed {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.btn-like{
+    border: none;
+    background: none;
+    outline: 0px;
+    margin-left: -8%;
+    cursor:pointer;
+}
+/* Botón de registro */
+.check-in {
+  border: none;
+  width: 100%;
+  height: 10%;
+  color: #fff;
+  font-size: 1em;
+  background: rgb(114, 112, 112);
+  padding: 10px 15px;
+  cursor: pointer;
 }
 .btn-follow {
   width: 70px;
@@ -265,189 +323,64 @@ label {
   cursor: pointer;
   border: 0;
 }
-.details-rcp {
-  font-size: 0.8em;
+
+/* Inputs */
+.input-init {
+  font-size: 0.9em;
+  padding: 10px;
+  border: none;
+  width: 80%;
+  text-align: left;
+  margin-bottom: 2%;
+}
+.input-contenedor {
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+.input-contenedor-google {
+  margin-bottom: 15px;
+  border: 2px solid #ff9635;
+}
+.clear {
+  border: none;
+  background: none;
   color: black;
-  margin-left: 144px;
-  margin-top: -10%;
-  display: flex;
 }
-.details-rcp :hover {
-  color: #d86c07;
+/* Text-area */
+.texta-receta2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  border: none;
+  width: 280px;
+  height: 90px;
+  margin-bottom: 2%;
+  background-color: #e5e5e5;
 }
-.details-rcp :visited {
-  color: red;
-}
-.prueba {
-  display: flex;
-}
-.user-img {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-}
-/*CARROUSEL*/
 
-.carousel {
-  width: 100%;
-  /*display: flex;
-    height: 100vh;
-    align-items: center; */
-}
-h4,
-h6,
-small,
-a {
-  margin: 0;
-  padding: 0;
-}
-a {
+/* flecha */
+#arrow {
+  margin: 0 0 0 0.25rem;
+  font-weight: 700;
+  font-size: 1.5rem;
   text-decoration: none;
+  align-self: flex-start;
+  color: black;
 }
-.carousel h6 {
-  font-size: 15px;
-  line-height: 30px;
-  padding-bottom: 24px;
-  opacity: 0.9;
-  text-transform: uppercase;
+.publish {
+  margin-top: 40px;
 }
-h6 {
-  margin-left: 5%;
-  margin-top: 5%;
-}
-/*imagen*/
-.slick-list {
-  position: relative;
+.post {
   display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 304px;
-  padding: 10px 0px;
-  margin: 0px auto;
-  max-width: hidden;
-  overflow: hidden;
 }
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  transition: 0.5s ease-in-out;
+.text-ingredient, .check{
+  font-size : 1.0em;
 }
-.slick {
-  position: relative;
-  width: 275px;
-  padding: 0 18px;
-  float: left;
-  box-sizing: border-box;
-  display: flex;
-  height: 100%;
-}
-.slick h4 {
-  position: absolute;
-  z-index: 1;
-  font-size: 15px;
-  line-height: 23px;
-  color: #000;
-  padding: 15px;
-  background: #ff9635;
-}
-.slick h4 small {
-  font-size: 15px;
-  display: block;
+.text-ingredient{
+font-weight:bold;
 }
 
-.slick a img {
-  object-fit: cover;
-  height: 300px;
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3 ease-in-out;
-}
-
-.slick a img:hover {
-  opacity: 0.85;
-}
-
-/* buttons */
-.slick-arrow {
-  border-radius: 30px;
-  background-color: #fff;
-  position: absolute;
-  z-index: 4;
-  width: 48px;
-  height: 48px;
-  text-align: center;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-  border: 0;
-  cursor: pointer;
-}
-
-.slick-arrow:focus {
-  outline: 0;
-}
-.slick-arrow .flecha {
-  width: 12px;
-  height: 100%;
-  margin-top: 30%;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.slick-prev {
-  left: 0px;
-}
-.slick-next {
-  right: 0px;
-}
-.icon-like {
-  margin-left: 15%;
-}
-.icon-share {
-  margin-left: 10%;
-}
-.pastilla {
-  width: 364px;
-  height: 50px;
-  background: #ff9635;
-  margin-top: 5%;
-}
-.icon-fork {
-  margin-left: 15%;
-  font-size: 15px;
-  padding: 5%;
-  flex-direction: row;
-}
-
-.icon-clock {
-  margin-left: 2%;
-  padding: 5%;
-  font-size: 15px;
-  flex-direction: row;
-}
-
-input[type="checkbox" i] {
-  font-size: 12px;
-}
-
-.container3 {
-  display: flex;
-  align-items: center;
-}
-.container3 p {
-  margin-left: 11px;
-}
 @media (min-width: 768px) {
-  .formulario,
-  .formulario-2,
-  header,
-  .imagesFeed,
-  .btn-feed,
-  .container2,
-  .Container-camera,
-  .container-recipe,
-  .carousel {
+  .formulario, .formulario-2, header, .imagesFeed, .btn-feed, .container2, .Container-camera, .container-recipe {
     margin-top: 0;
     margin: auto;
     width: 500px;
@@ -468,4 +401,12 @@ input[type="checkbox" i] {
   .ctn-receta3 {
     margin-left: 59%;
   }
+  .google-icon {
+    min-width: 22px;
+    width: 5%;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 16%;
+    float: left;
+}
 }
